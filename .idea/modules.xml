@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/socket_learn2_0/socket_learn2_0.iml" filepath="$PROJECT_DIR$/socket_learn2_0/socket_learn2_0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/socket_learn_3_0/socket_learn_3_0.iml" filepath="$PROJECT_DIR$/socket_learn_3_0/socket_learn_3_0.iml" />
+    </modules>
+  </component>
+</project>
