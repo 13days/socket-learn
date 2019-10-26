@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6213d5ba-a356-47eb-acf2-bb105a745117" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/MessageCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/UDPProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/UDPSearcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/chapter_3_2/MessageCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/chapter_3_2/UDPProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/chapter_3_2/UDPSearcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter_2_3/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter2/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter_2_3/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter2/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter_2_3/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter_2_3/Server$ClientHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter_2_3/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/MessageCreator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/META-INF/socket_learn2_0.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter3/UDPProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter3/UDPProvider.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/socket_learn2_0/target/" />
     <ignored path="$PROJECT_DIR$/socket_learn_3_0/target/" />
@@ -35,7 +33,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter2/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
+            <state relative-caret-position="988">
               <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -60,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/UDPProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+            <state relative-caret-position="109">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,10 +68,38 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/MessageCreator.java">
+        <entry file="file://$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/chapter_3_2/UDPProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            <state relative-caret-position="266">
+              <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/chapter_3_2/UDPSearcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="116" column="23" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2724#2732#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/chapter_3_2/MessageCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+              <folding>
+                <element signature="e#227#228#0" expanded="true" />
+                <element signature="e#268#269#0" expanded="true" />
+                <element signature="e#522#523#0" expanded="true" />
+                <element signature="e#563#564#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,6 +125,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>UDPSearcher Finished</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -110,8 +141,11 @@
         <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter_2_3/Server.java" />
         <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter2/Server.java" />
         <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/UDPSearcher.java" />
-        <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/UDPProvider.java" />
         <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/MessageCreator.java" />
+        <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/chapter_3_2/MessageCreator.java" />
+        <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/UDPProvider.java" />
+        <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/chapter_3_2/UDPSearcher.java" />
+        <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/chapter_3_2/UDPProvider.java" />
       </list>
     </option>
   </component>
@@ -122,7 +156,23 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="socket-learn-2.0" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="socket-learn-2.0" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-12" />
     <option name="width" value="1890" />
     <option name="height" value="960" />
@@ -166,7 +216,24 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socket-learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="socket_learn2_0" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="chapter3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socket-learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="socket_learn2_0" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter3" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter_3_2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -177,13 +244,18 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572083504951" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572105490603" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="chapter3.chapter_3_2" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -197,7 +269,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.UDPSearcher">
+  <component name="RunManager" selected="Application.UDPSearcher (1)">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chapter2.Client" />
       <module name="socket_learn2_0" />
@@ -211,12 +283,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter2.Server" />
+    <configuration name="UDPProvider (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter3.chapter_3_2.UDPProvider" />
       <module name="socket_learn2_0" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter2.*" />
+          <option name="PATTERN" value="chapter3.chapter_3_2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -230,6 +302,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="chapter3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UDPSearcher (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter3.chapter_3_2.UDPSearcher" />
+      <module name="socket_learn2_0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter3.chapter_3_2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -252,10 +337,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UDPSearcher (1)" />
+        <item itemvalue="Application.UDPProvider (1)" />
         <item itemvalue="Application.UDPSearcher" />
         <item itemvalue="Application.UDPProvider" />
         <item itemvalue="Application.Client" />
-        <item itemvalue="Application.Server" />
       </list>
     </recent_temporary>
   </component>
@@ -269,43 +355,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571985893155</updated>
-      <workItem from="1571985896980" duration="10599000" />
+      <workItem from="1571985896980" duration="20000000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10599000" />
+    <option name="totallyTimeSpent" value="20000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
       <window_info id="Designer" />
-      <window_info id="UI Designer" />
+      <window_info id="Image Layers" />
       <window_info id="Capture Tool" />
+      <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2497979" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" weight="0.21136767" />
+      <window_info anchor="bottom" id="Duplicate detector" weight="0.3285968" />
+      <window_info anchor="bottom" id="Terminal" weight="0.21847247" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.21847247" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.38010657" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22557727" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.46536413" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.028419184" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.41563055" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Maven" weight="0.32983023" />
       <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -326,16 +413,6 @@
         <state relative-caret-position="-57">
           <folding>
             <element signature="e#0#2105#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter2/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -363,18 +440,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/UDPProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        <state relative-caret-position="109">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/MessageCreator.java">
+    <entry file="file://$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter2/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        <state relative-caret-position="988">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/chapter_3_2/MessageCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <element signature="e#227#228#0" expanded="true" />
+            <element signature="e#268#269#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/chapter_3_2/UDPSearcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="116" column="23" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2724#2732#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter3/chapter_3_2/UDPProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -430,7 +541,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>socket_learn_3_0</last-edited>
+          <last-edited>socket_learn2_0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
