@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/chatRoom_1_0/client/chatRoom--1.0.iml" filepath="$PROJECT_DIR$/chatRoom_1_0/client/chatRoom--1.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chatRoom_1_0/server/chatRoom-1.0.iml" filepath="$PROJECT_DIR$/chatRoom_1_0/server/chatRoom-1.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chatRoom_1_0/foo/chatRoom-1.0 (1).iml" filepath="$PROJECT_DIR$/chatRoom_1_0/foo/chatRoom-1.0 (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/chatRoom_1_0/chatRoom_1_0.iml" filepath="$PROJECT_DIR$/chatRoom_1_0/chatRoom_1_0.iml" />
       <module fileurl="file://$PROJECT_DIR$/socket_learn2_0/socket_learn2_0.iml" filepath="$PROJECT_DIR$/socket_learn2_0/socket_learn2_0.iml" />
       <module fileurl="file://$PROJECT_DIR$/socket_learn_3_0/socket_learn_3_0.iml" filepath="$PROJECT_DIR$/socket_learn_3_0/socket_learn_3_0.iml" />
     </modules>
