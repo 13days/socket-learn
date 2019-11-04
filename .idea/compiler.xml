@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="socket_learn2_0" target="1.5" />
+      <module name="socket_learn2_0" target="8" />
       <module name="socket_learn_3_0" target="1.5" />
     </bytecodeTargetLevel>
   </component>

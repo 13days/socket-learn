@@ -13,8 +13,10 @@ public class Server {
     private static final int PORT = 20000;
 
     public static void main(String[] args) throws IOException {
+        // 创建服务器
         ServerSocket server = createServerSocket();
 
+        // 初始化服务器
         initServerSocket(server);
 
         // 绑定到本地端口上,ServerSocket绑定即连接
