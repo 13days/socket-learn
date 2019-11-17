@@ -1,371 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6213d5ba-a356-47eb-acf2-bb105a745117" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chatRoom_1_0/client/src/main/java/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatRoom_1_0/client/src/main/java/TCPClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatRoom_1_0/client/src/main/java/UDPSearcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatRoom_1_0/client/src/main/java/bean/ServerInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatRoom_1_0/foo/src/main/java/Foo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatRoom_1_0/foo/src/main/java/constants/TCPConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatRoom_1_0/foo/src/main/java/constants/UDPConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatRoom_1_0/lib-clink/lib-clink.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatRoom_1_0/lib-clink/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/Clink.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/utils/ByteUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/utils/CloseUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatRoom_1_0/server/src/main/java/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatRoom_1_0/server/src/main/java/TCPServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatRoom_1_0/server/src/main/java/UDPProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatRoom_1_0/server/src/main/java/handle/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="ad911063-4726-4892-8fd4-e25a24cd6dd5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatRoom_1_0/client/chatRoom--1.0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/chatRoom_1_0/client/client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatRoom_1_0/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatRoom_1_0/client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatRoom_1_0/foo/chatRoom-1.0 (1).iml" beforeDir="false" afterPath="$PROJECT_DIR$/chatRoom_1_0/foo/foo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatRoom_1_0/foo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatRoom_1_0/foo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatRoom_1_0/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatRoom_1_0/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatRoom_1_0/server/chatRoom-1.0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/chatRoom_1_0/server/server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatRoom_1_0/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatRoom_1_0/server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter2/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter2/Server$ClientHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter2/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter3/UDPProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter3/UDPSearcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter3/chapter_3_2/MessageCreator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter3/chapter_3_2/UDPProvider$Provider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter3/chapter_3_2/UDPProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter3/chapter_3_2/UDPSearcher$Device.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter3/chapter_3_2/UDPSearcher$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter3/chapter_3_2/UDPSearcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter4/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter4/Server$ClientHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter4/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter4/Tools.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5/client/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5/client/TCPClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5/client/UDPSearcher$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5/client/UDPSearcher$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5/client/UDPSearcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5/client/bean/ServerInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5/clink/net/qiujuer/clink/Clink.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5/clink/net/qiujuer/clink/utils/ByteUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5/constants/TCPConstants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5/constants/UDPConstants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5/server/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5/server/TCPServer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5/server/TCPServer$ClientHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5/server/TCPServer$ClientListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5/server/TCPServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5/server/UDPProvider$Provider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5/server/UDPProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/client/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/client/TCPClient$ReadHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/client/TCPClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/client/UDPSearcher$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/client/UDPSearcher$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/client/UDPSearcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/client/bean/ServerInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/clink/net/qiujuer/clink/Clink.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/clink/net/qiujuer/clink/utils/ByteUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/clink/net/qiujuer/clink/utils/CloseUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/constants/TCPConstants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/constants/UDPConstants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/server/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/server/TCPServer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/server/TCPServer$ClientListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/server/TCPServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/server/UDPProvider$Provider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/server/UDPProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/server/handle/ClientHandler$ClientReadHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/server/handle/ClientHandler$ClientWriteHandler$WriteRunnable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/server/handle/ClientHandler$ClientWriteHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/server/handle/ClientHandler$CloseNotify.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_learn2_0/target/classes/chapter5_1/server/handle/ClientHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatRoom_1_0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatRoom_1_0/.idea/workspace.xml" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/socket_learn2_0/target/" />
-    <ignored path="$PROJECT_DIR$/socket_learn_3_0/target/" />
-    <ignored path="$PROJECT_DIR$/chatRoom_1_0/target/" />
-    <ignored path="$PROJECT_DIR$/chatRoom_1_0/server/target/" />
-    <ignored path="$PROJECT_DIR$/chatRoom_1_0/client/target/" />
-    <ignored path="$PROJECT_DIR$/chatRoom_1_0/foo/target/" />
-    <ignored path="$PROJECT_DIR$/chatRoom_1_0/chartroom-lib-clink/target/" />
-    <ignored path="$PROJECT_DIR$/chatRoom_1_0/lib-clink/target/" />
+    <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chatRoom_1_0/client/src/main/java/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chatRoom_1_0/client/src/test/java/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/sql/Date.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/jre/lib/rt.jar!/sun/nio/ch/IOUtil.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1064">
-              <caret line="63" column="30" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/jre/lib/rt.jar!/sun/nio/ch/NativeDispatcher.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/jre/lib/rt.jar!/sun/nio/ch/FileDispatcherImpl.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1938">
-              <caret line="123" column="102" selection-start-line="123" selection-start-column="102" selection-end-line="123" selection-end-column="102" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/nio/channels/WritableByteChannel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1482">
-              <caret line="102" column="15" selection-start-line="102" selection-start-column="15" selection-end-line="102" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/io/FileDescriptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/nio/channels/SeekableByteChannel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="988">
-              <caret line="76" column="49" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/nio/channels/FileChannel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5548">
-              <caret line="324" column="42" selection-start-line="324" selection-start-column="37" selection-end-line="324" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>UDPSearcher Finished</find>
-      <find>send</find>
-      <find>sendUrgentData</find>
-      <find>连接已关闭，无法读取数据！</find>
-      <find>用</find>
-      <find>array</find>
-      <find>Channel</find>
-      <find>write</find>
-      <find>var0</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter5/client/UDPSearcher.java" />
-        <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter5/constants/UDPConstants.java" />
-        <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter5/server/UDPProvider.java" />
-        <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter5/server/TCPServer.java" />
-        <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter5/client/TCPClient.java" />
-        <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter5_1/client/bean/ServerInfo.java" />
-        <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter5_1/client/Client.java" />
-        <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter5_1/server/Server.java" />
-        <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter5_1/server/UDPProvider.java" />
-        <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter5_1/server/handle/ClientHandler.java" />
-        <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter5_1/client/UDPSearcher.java" />
-        <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter5_1/client/TCPClient.java" />
-        <option value="$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter5_1/server/TCPServer.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/pom.xml" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/foo/pom.xml" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/pom.xml" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/box/AbsByteArrayReceivePacket.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/box/BytesSendPacket.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/box/FileReceivePacket.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/box/FileSendPacket.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/frames/AbsReceiveFrame.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/frames/AbsSendFrame.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/frames/AbsSendPacketFrame.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/frames/CancelReceiveFrame.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/frames/CancelSendFrame.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/frames/ReceiveEntityFrame.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/frames/ReceiveFrameFactory.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/frames/ReceiveHeaderFrame.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/frames/SendEntityFrame.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/frames/SendHeaderFrame.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/impl/SocketChannelAdapter.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/core/Connector.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/impl/async/AsyncPacketReader.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/impl/async/AsyncPacketWriter.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/impl/async/AsyncReceiveDispatcher.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/impl/IoSelectorProvider.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/core/IoProvider.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/utils/CloseUtils.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/client/src/main/java/Client.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/client/src/main/java/UDPSearcher.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/server/src/main/java/UDPProvider.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/server/src/main/java/Server.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/server/src/main/java/handle/ClientHandler.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/server/pom.xml" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/client/pom.xml" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/foo/src/main/java/constants/TCPConstants.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/foo/src/main/java/constants/UDPConstants.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/client/src/main/java/TCPClient.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/server/src/main/java/TCPServer.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/client/src/main/java/Test.java" />
-        <option value="$PROJECT_DIR$/chatRoom_1_0/client/src/test/java/Test.java" />
-      </list>
-    </option>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="980" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="width" value="1938" />
-    <option name="height" value="1029" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="socket-learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatRoom_1_0" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket-learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatRoom_1_0" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket-learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatRoom_1_0" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket-learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatRoom_1_0" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="socket-learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatRoom_1_0" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket-learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatRoom_1_0" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket-learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatRoom_1_0" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket-learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatRoom_1_0" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket-learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatRoom_1_0" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="socket-learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatRoom_1_0" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -374,34 +55,14 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573800754835" />
-    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="chapter3.chapter_3_2" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\git_project\socket-learn\chatRoom_1_0\server\src\main\java" />
-      <recent name="D:\git_project\socket-learn\chatRoom_1_0\client\src\main\java" />
-      <recent name="D:\git_project\socket-learn\chatRoom_1_0\lib-clink\src\main\java" />
-      <recent name="D:\git_project\socket-learn\chatRoom_1_0\foo\src\main\java" />
-      <recent name="D:\git_project\socket-learn\chatRoom_1_0\clinet" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -415,796 +76,64 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test">
-    <configuration name="Client (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter5_1.client.Client" />
-      <module name="socket_learn2_0" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chapter5_1.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Client" />
-      <module name="client" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Server (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter5_1.server.Server" />
-      <module name="socket_learn2_0" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chapter5_1.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Server" />
-      <module name="server" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test" />
-      <module name="client" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.Client" />
-        <item itemvalue="Application.Server" />
-        <item itemvalue="Application.Client (2)" />
-        <item itemvalue="Application.Server (2)" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6213d5ba-a356-47eb-acf2-bb105a745117" name="Default Changelist" comment="" />
-      <created>1571985893155</created>
+      <changelist id="ad911063-4726-4892-8fd4-e25a24cd6dd5" name="Default Changelist" comment="" />
+      <created>1573974996317</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1571985893155</updated>
-      <workItem from="1571985896980" duration="25380000" />
-      <workItem from="1572505395121" duration="17716000" />
-      <workItem from="1572871681289" duration="11798000" />
-      <workItem from="1572883806196" duration="241000" />
-      <workItem from="1572884660964" duration="6981000" />
-      <workItem from="1573388241499" duration="2155000" />
-      <workItem from="1573709163741" duration="1591000" />
-      <workItem from="1573725301216" duration="2850000" />
-      <workItem from="1573801148132" duration="588000" />
+      <updated>1573974996317</updated>
+      <workItem from="1573974999163" duration="13000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69300000" />
+    <option name="totallyTimeSpent" value="13000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
-    <editor active="true" />
+    <frame x="68" y="20" width="1400" height="784" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2961165" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962743" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42115027" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.40630797" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Duplicate detector" order="7" weight="0.3285968" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.36944938" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.23376623" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.3285968" />
-      <window_info anchor="bottom" id="Thumbnails" order="14" weight="0.3285968" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.20145631" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Key Promoter X" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/socket_learn2_0/src/main/java/chapter5_1/client/TCPClient.java</url>
-          <line>115</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/impl/async/AsyncPacketReader.java" />
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/impl/async/AsyncReceiveDispatcher.java" />
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/impl/IoSelectorProvider.java" />
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/impl/SocketChannelAdapter.java" />
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/impl/async/AsyncPacketWriter.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/io/Closeable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/core/ds/BytePriorityNode.java" />
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/core/Connector.java" />
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/core/IoProvider.java" />
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/box/AbsByteArrayReceivePacket.java" />
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/box/BytesReceivePacket.java" />
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/utils/ByteUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1216">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/utils/CloseUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/java/Clink.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/foo/src/main/java/Foo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="41" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/net/ServerSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/client/src/main/java/TCPClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/foo/src/main/java/constants/TCPConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/foo/src/main/java/constants/UDPConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/server/src/main/java/UDPProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#close#0;class#Provider#0;class#UDPProvider#0" />
-            <element signature="method#exit#0;class#Provider#0;class#UDPProvider#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/server/src/main/java/handle/ClientHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1015#1016#0" expanded="true" />
-            <element signature="e#1048#1049#0" expanded="true" />
-            <element signature="e#1315#1316#0" expanded="true" />
-            <element signature="e#1353#1354#0" expanded="true" />
-            <element signature="method#exitBySelf#0;class#ClientHandler#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/server/src/main/java/TCPServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1102">
-          <caret line="88" column="89" selection-start-line="88" selection-start-column="89" selection-end-line="88" selection-end-column="89" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#broadcast#0;class#TCPServer#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/client/src/main/java/bean/ServerInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/lang/CharSequence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/Test">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>Test</OriginalElement>
-          <nodes>
-            <node x="" y="">Test</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="36.0" y="15.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/java.nio.Buffer">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>java.nio.Buffer</OriginalElement>
-          <nodes>
-            <node x="" y="">java.nio.Buffer</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="41.0" y="15.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/client/replay_pid140080.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1987">
-          <caret line="947" column="23" selection-start-line="947" selection-start-column="23" selection-end-line="947" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/java.nio.CharBuffer">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>java.nio.CharBuffer</OriginalElement>
-          <nodes>
-            <node x="458.75" y="81.0">java.lang.CharSequence</node>
-            <node x="383.75" y="275.0">java.nio.CharBuffer</node>
-            <node x="608.75" y="81.0">java.lang.Appendable</node>
-            <node x="0.0" y="0.0">java.nio.Buffer</node>
-            <node x="747.75" y="81.0">java.lang.Readable</node>
-            <node x="297.0" y="81.0">java.lang.Comparable</node>
-            <node x="57.553571428571445" y="252.0">java.nio.ByteBuffer</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="java.nio.CharBuffer" target="java.lang.Comparable">
-              <point x="-56.0" y="-73.0" />
-              <point x="467.75" y="212.0" />
-              <point x="385.5" y="212.0" />
-              <point x="29.5" y="15.0" />
-            </edge>
-            <edge source="java.nio.CharBuffer" target="java.lang.Readable">
-              <point x="112.0" y="-73.0" />
-              <point x="635.75" y="232.0" />
-              <point x="798.75" y="232.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="java.nio.ByteBuffer" target="java.lang.Comparable">
-              <point x="70.0" y="-96.0" />
-              <point x="267.55357142857144" y="232.0" />
-              <point x="326.5" y="232.0" />
-              <point x="-29.5" y="15.0" />
-            </edge>
-            <edge source="java.nio.ByteBuffer" target="java.nio.Buffer">
-              <point x="-70.0" y="-96.0" />
-              <point x="127.55357142857144" y="232.0" />
-              <point x="69.25" y="232.0" />
-              <point x="-69.25" y="96.0" />
-            </edge>
-            <edge source="java.nio.CharBuffer" target="java.lang.Appendable">
-              <point x="56.0" y="-73.0" />
-              <point x="579.75" y="222.0" />
-              <point x="668.25" y="222.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="java.nio.CharBuffer" target="java.lang.CharSequence">
-              <point x="0.0" y="-73.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="java.nio.CharBuffer" target="java.nio.Buffer">
-              <point x="-112.0" y="-73.0" />
-              <point x="411.75" y="222.0" />
-              <point x="207.75" y="222.0" />
-              <point x="69.25" y="96.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="220.0" y="193.0" />
-          <SelectedNodes>
-            <node>java.nio.ByteBuffer</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Inner Classes</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/java.nio.channels.Channel">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>java.nio.channels.Channel</OriginalElement>
-          <nodes>
-            <node x="448.7499999999999" y="0.0">java.lang.AutoCloseable</node>
-            <node x="0.0" y="376.0">java.nio.channels.AsynchronousByteChannel</node>
-            <node x="12.5" y="250.0">java.nio.channels.AsynchronousChannel</node>
-            <node x="662.5" y="376.0">java.nio.channels.ByteChannel</node>
-            <node x="230.49999999999994" y="330.0">java.nio.channels.spi.AbstractInterruptibleChannel</node>
-            <node x="467.2499999999999" y="160.0">java.nio.channels.Channel</node>
-            <node x="637.0" y="502.0">java.nio.channels.SeekableByteChannel</node>
-            <node x="1002.5" y="250.0">java.nio.channels.NetworkChannel</node>
-            <node x="1000.5" y="376.0">java.nio.channels.MulticastChannel</node>
-            <node x="207.49999999999994" y="250.0">java.nio.channels.InterruptibleChannel</node>
-            <node x="735.0" y="250.0">java.nio.channels.ReadableByteChannel</node>
-            <node x="802.5" y="376.0">java.nio.channels.ScatteringByteChannel</node>
-            <node x="462.7499999999999" y="80.0">java.io.Closeable</node>
-            <node x="538.75" y="250.0">java.nio.channels.WritableByteChannel</node>
-            <node x="492.13125" y="582.0">java.nio.channels.FileChannel</node>
-            <node x="465.49999999999994" y="376.0">java.nio.channels.GatheringByteChannel</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="java.nio.channels.ByteChannel" target="java.nio.channels.WritableByteChannel">
-              <point x="-30.0" y="-15.0" />
-              <point x="692.5" y="305.0" />
-              <point x="665.5" y="305.0" />
-              <point x="42.25" y="15.0" />
-            </edge>
-            <edge source="java.nio.channels.FileChannel" target="java.nio.channels.ScatteringByteChannel">
-              <point x="100.87499999999994" y="-26.5" />
-              <point x="727.50625" y="557.0" />
-              <point x="891.5" y="557.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="java.nio.channels.AsynchronousChannel" target="java.nio.channels.Channel">
-              <point x="0.0" y="-15.0" />
-              <point x="100.0" y="210.0" />
-              <point x="475.08333333333326" y="210.0" />
-              <point x="-39.166666666666686" y="15.0" />
-            </edge>
-            <edge source="java.nio.channels.NetworkChannel" target="java.nio.channels.Channel">
-              <point x="0.0" y="-15.0" />
-              <point x="1074.5" y="210.0" />
-              <point x="553.4166666666665" y="210.0" />
-              <point x="39.16666666666663" y="15.0" />
-            </edge>
-            <edge source="java.nio.channels.WritableByteChannel" target="java.nio.channels.Channel">
-              <point x="0.0" y="-15.0" />
-              <point x="623.25" y="230.0" />
-              <point x="522.0833333333333" y="230.0" />
-              <point x="7.833333333333371" y="15.0" />
-            </edge>
-            <edge source="java.nio.channels.ByteChannel" target="java.nio.channels.ReadableByteChannel">
-              <point x="30.0" y="-15.0" />
-              <point x="752.5" y="305.0" />
-              <point x="778.5" y="305.0" />
-              <point x="-43.5" y="15.0" />
-            </edge>
-            <edge source="java.nio.channels.ReadableByteChannel" target="java.nio.channels.Channel">
-              <point x="0.0" y="-15.0" />
-              <point x="822.0" y="220.0" />
-              <point x="537.7499999999999" y="220.0" />
-              <point x="23.5" y="15.0" />
-            </edge>
-            <edge source="java.nio.channels.spi.AbstractInterruptibleChannel" target="java.nio.channels.Channel">
-              <point x="53.75" y="-61.0" />
-              <point x="391.74999999999994" y="305.0" />
-              <point x="384.99999999999994" y="305.0" />
-              <point x="384.99999999999994" y="230.0" />
-              <point x="506.41666666666663" y="230.0" />
-              <point x="-7.833333333333314" y="15.0" />
-            </edge>
-            <edge source="java.nio.channels.InterruptibleChannel" target="java.nio.channels.Channel">
-              <point x="0.0" y="-15.0" />
-              <point x="290.99999999999994" y="220.0" />
-              <point x="490.7499999999999" y="220.0" />
-              <point x="-23.5" y="15.0" />
-            </edge>
-            <edge source="java.nio.channels.GatheringByteChannel" target="java.nio.channels.WritableByteChannel">
-              <point x="0.0" y="-15.0" />
-              <point x="554.0" y="305.0" />
-              <point x="581.0" y="305.0" />
-              <point x="-42.25" y="15.0" />
-            </edge>
-            <edge source="java.nio.channels.ScatteringByteChannel" target="java.nio.channels.ReadableByteChannel">
-              <point x="0.0" y="-15.0" />
-              <point x="891.5" y="305.0" />
-              <point x="865.5" y="305.0" />
-              <point x="43.5" y="15.0" />
-            </edge>
-            <edge source="java.nio.channels.MulticastChannel" target="java.nio.channels.NetworkChannel">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="java.nio.channels.AsynchronousByteChannel" target="java.nio.channels.AsynchronousChannel">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="java.nio.channels.FileChannel" target="java.nio.channels.SeekableByteChannel">
-              <point x="33.62499999999994" y="-26.5" />
-              <point x="660.25625" y="557.0" />
-              <point x="722.5" y="557.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="java.nio.channels.SeekableByteChannel" target="java.nio.channels.ByteChannel">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="java.nio.channels.FileChannel" target="java.nio.channels.GatheringByteChannel">
-              <point x="-33.62500000000006" y="-26.5" />
-              <point x="593.00625" y="557.0" />
-              <point x="554.0" y="557.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="java.nio.channels.spi.AbstractInterruptibleChannel" target="java.nio.channels.InterruptibleChannel">
-              <point x="-53.75" y="-61.0" />
-              <point x="284.24999999999994" y="305.0" />
-              <point x="290.99999999999994" y="305.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="java.io.Closeable" target="java.lang.AutoCloseable">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="java.nio.channels.Channel" target="java.io.Closeable">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="java.nio.channels.FileChannel" target="java.nio.channels.spi.AbstractInterruptibleChannel">
-              <point x="-100.87500000000006" y="-26.5" />
-              <point x="525.75625" y="557.0" />
-              <point x="337.99999999999994" y="557.0" />
-              <point x="0.0" y="61.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.9" x="499.0" y="391.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/client/src/main/java/UDPSearcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="85" column="62" selection-start-line="85" selection-start-column="62" selection-end-line="85" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/nio/channels/Channel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/nio/Buffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2888">
-          <caret line="175" selection-start-line="175" selection-end-line="175" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/nio/StringCharBuffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/client/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/nio/CharBuffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="262" column="13" selection-start-line="262" selection-start-column="13" selection-end-line="262" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/io/FileInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6688">
-          <caret line="376" column="35" selection-start-line="376" selection-start-column="35" selection-end-line="376" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/server/src/main/java/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/jre/lib/rt.jar!/sun/nio/ch/FileChannelImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3173">
-          <caret line="193" column="28" selection-start-line="193" selection-start-column="28" selection-end-line="193" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/client/src/main/java/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/sql/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/jre/lib/rt.jar!/sun/nio/ch/IOUtil.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="63" column="30" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/jre/lib/rt.jar!/sun/nio/ch/NativeDispatcher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/jre/lib/rt.jar!/sun/nio/ch/FileDispatcherImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
-          <caret line="123" column="102" selection-start-line="123" selection-start-column="102" selection-end-line="123" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/nio/channels/WritableByteChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1482">
-          <caret line="102" column="15" selection-start-line="102" selection-start-column="15" selection-end-line="102" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/io/FileDescriptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/nio/channels/SeekableByteChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="76" column="49" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/nio/channels/FileChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5548">
-          <caret line="324" column="42" selection-start-line="324" selection-start-column="37" selection-end-line="324" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatRoom_1_0/client/src/test/java/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-  </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>client</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

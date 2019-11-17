@@ -23,6 +23,10 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
         forwardingThreadPoolExecutor = Executors.newSingleThreadExecutor ();
     }
 
+    /**
+     * 开启TCP监听
+     * @return
+     */
     public boolean start() {
         try {
             ClientListener listener = new ClientListener(port);
@@ -35,6 +39,9 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
         return true;
     }
 
+    /**
+     * 关闭tcp监听,把所有客户端移除
+     */
     public void stop() {
         if (mListener != null) {
             mListener.exit();
@@ -69,7 +76,7 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
     }
 
     /**
-     * 打印到屏幕--异步线程调用
+     * 转发客户端消息给其他客户端--异步线程调用
      * @param handler
      * @param msg
      */
@@ -94,7 +101,7 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
 
 
     /**
-     * 服务器监听客户端线程
+     * 服务器监听客户端线程 -- 等待客户端连接
      */
     private class ClientListener extends Thread {
         private ServerSocket server;

@@ -17,6 +17,12 @@ public class ClientHandler {
     // 客户端信息
     private final String clientInfo;
 
+    /**
+     * 构建客户端处理实例
+     * @param socket
+     * @param clientHandlerCallback
+     * @throws IOException
+     */
     public ClientHandler(Socket socket, ClientHandlerCallback clientHandlerCallback) throws IOException {
         this.socket = socket;
         this.readHandler = new ClientReadHandler(socket.getInputStream());
@@ -31,6 +37,9 @@ public class ClientHandler {
         return clientInfo;
     }
 
+    /**
+     * 提供给外部关闭掉客户端连接实例
+     */
     public void exit() {
         readHandler.exit();
         writeHandler.exit();
@@ -39,10 +48,17 @@ public class ClientHandler {
                 " P:" + socket.getPort());
     }
 
+    /**
+     * 发送一条消息给客户端
+     * @param str
+     */
     public void send(String str) {
         writeHandler.send(str);
     }
 
+    /**
+     * 从客户端读取信息并打印到屏幕 -- 线程启动,等待客户端发信息过来
+     */
     public void readToPrint() {
         readHandler.start();
     }
@@ -59,15 +75,15 @@ public class ClientHandler {
      * 客户端处理回调
      */
     public interface ClientHandlerCallback {
-        // 自身关闭通知
+        // handler客户端自己关闭自己时,服务器的行为
         void onSelfClosed(ClientHandler handler);
 
-        // 收到消息时通知
+        // 收到handler客户端传来的消息时,服务器的行为
         void onNewMessageArrived(ClientHandler handler, String msg);
     }
 
     /**
-     * 一个线程 -- 处理一个TCP的读入流
+     * 对于每个客户端的输入,起一个线程 -- 处理一个TCP的读入流
      */
     class ClientReadHandler extends Thread {
         private boolean done = false;
@@ -114,7 +130,8 @@ public class ClientHandler {
     }
 
     /**
-     * 写数据丢到线程池里
+     * 本类处理发送一条消息给客户端print出去
+     * 采用一个单例线程池处理所有的发送
      */
     class ClientWriteHandler {
         private boolean done = false;
@@ -132,6 +149,10 @@ public class ClientHandler {
             executorService.shutdownNow();
         }
 
+        /**
+         * 发送一条消息给该客户端
+         * @param str
+         */
         void send(String str) {
             if(done){
                 return;

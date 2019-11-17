@@ -26,6 +26,9 @@ class UDPProvider {
         }
     }
 
+    /**
+     * UDP监听客户端的请求,验证并返回服务器信息
+     */
     private static class Provider extends Thread {
         private final byte[] sn;
         // 服务器TCP端口
@@ -92,7 +95,7 @@ class UDPProvider {
                         byteBuffer.putInt(port);
                         byteBuffer.put(sn);
                         int len = byteBuffer.position();
-                        // 直接根据发送者构建一份回送信息
+                        // 直接根据发送者构建一份回送信息 把服务器的信息返回给客户端
                         DatagramPacket responsePacket = new DatagramPacket(buffer,
                                 len,
                                 receivePack.getAddress(),

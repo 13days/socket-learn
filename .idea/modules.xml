@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/chatRoom_1_0/chatRoom_1_0.iml" filepath="$PROJECT_DIR$/chatRoom_1_0/chatRoom_1_0.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chatRoom_1_0/client/client.iml" filepath="$PROJECT_DIR$/chatRoom_1_0/client/client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chatRoom_1_0/foo/foo.iml" filepath="$PROJECT_DIR$/chatRoom_1_0/foo/foo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chatRoom_1_0/lib-clink/lib-clink.iml" filepath="$PROJECT_DIR$/chatRoom_1_0/lib-clink/lib-clink.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chatRoom_1_0/server/server.iml" filepath="$PROJECT_DIR$/chatRoom_1_0/server/server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/socket_learn2_0/socket_learn2_0.iml" filepath="$PROJECT_DIR$/socket_learn2_0/socket_learn2_0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chatRoom_1_0/client/src/main/main.iml" filepath="$PROJECT_DIR$/chatRoom_1_0/client/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/socket_learn2_0/src/main/main1.iml" filepath="$PROJECT_DIR$/socket_learn2_0/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chatRoom_1_0/foo/src/main/main2.iml" filepath="$PROJECT_DIR$/chatRoom_1_0/foo/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/main3.iml" filepath="$PROJECT_DIR$/chatRoom_1_0/lib-clink/src/main/main3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chatRoom_1_0/server/src/main/main4.iml" filepath="$PROJECT_DIR$/chatRoom_1_0/server/src/main/main4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chatRoom_1_0/client/src/test/test.iml" filepath="$PROJECT_DIR$/chatRoom_1_0/client/src/test/test.iml" />
     </modules>
   </component>
 </project>

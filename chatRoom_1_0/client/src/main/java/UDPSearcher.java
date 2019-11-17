@@ -12,9 +12,17 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * UDP搜索服务器
+ */
 public class UDPSearcher {
     private static final int LISTEN_PORT = UDPConstants.PORT_CLIENT_RESPONSE;
 
+    /**
+     * 搜索服务器
+     * @param timeout
+     * @return
+     */
     public static ServerInfo searchServer(int timeout) {
         System.out.println("UDPSearcher Started.");
 
@@ -40,6 +48,12 @@ public class UDPSearcher {
         return null;
     }
 
+    /**
+     * 启动监听线程
+     * @param receiveLatch
+     * @return
+     * @throws InterruptedException
+     */
     private static Listener listen(CountDownLatch receiveLatch) throws InterruptedException {
         System.out.println("UDPSearcher start listen.");
         CountDownLatch startDownLatch = new CountDownLatch(1);
@@ -49,6 +63,10 @@ public class UDPSearcher {
         return listener;
     }
 
+    /**
+     * 发送UDP广播
+     * @throws IOException
+     */
     private static void sendBroadcast() throws IOException {
         System.out.println("UDPSearcher sendBroadcast started.");
 
@@ -79,6 +97,9 @@ public class UDPSearcher {
         System.out.println("UDPSearcher sendBroadcast finished.");
     }
 
+    /**
+     * 监听线程
+     */
     private static class Listener extends Thread {
         private final int listenPort;
         private final CountDownLatch startDownLatch;
@@ -157,6 +178,10 @@ public class UDPSearcher {
             }
         }
 
+        /**
+         * 获取UDP搜索并关闭
+         * @return
+         */
         List<ServerInfo> getServerAndClose() {
             done = true;
             close();
