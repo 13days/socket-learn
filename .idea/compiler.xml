@@ -6,19 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="chatRoom--1.0" />
-        <module name="chatRoom-1.0" />
-        <module name="chatRoom-1.0 (1)" />
-        <module name="chatRoom_1_0" />
+        <module name="client" />
+        <module name="foo" />
+        <module name="lib-clink" />
+        <module name="server" />
         <module name="socket_learn2_0" />
-        <module name="socket_learn_3_0" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="chatRoom--1.0" target="1.5" />
-      <module name="chatRoom-1.0" target="1.5" />
-      <module name="chatRoom-1.0 (1)" target="1.5" />
       <module name="chatRoom_1_0" target="1.5" />
+      <module name="client" target="8" />
+      <module name="foo" target="1.5" />
+      <module name="lib-clink" target="1.5" />
+      <module name="server" target="8" />
       <module name="socket_learn2_0" target="8" />
       <module name="socket_learn_3_0" target="1.5" />
     </bytecodeTargetLevel>
