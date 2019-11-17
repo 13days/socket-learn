@@ -360,9 +360,113 @@
 			减少线程数量
 			增加线程执行繁忙状态
 			客户端Buffer复用机制
+
+7.阻塞IO和非阻塞IO
+	阻塞IO线程消耗:
+		ServerSocker.accept() 一个客户端 -- Thread A:read(),write(),close()
+		2n+m(约13)个线程 -- 多线程切换对CPU消耗很大,CPU扫描线程,维护线程的状态,IO调度,用户态和内核态的切换都是花费很大的内存的
+	
+	非阻塞IO线程优势:
+		A --- |							    | 监听客户端来源					
+		B --- |							    | 客户端建立连接
+		C --- | --> NIO --> Main Thread --> | 输出数据到客户端
+		D --- |		服务器				    | 读取客户端数据
+		E --- |							    |
+	
+	NIO == Non-blocking I/O
+		JDK 1.4引入
+		在标准Java代码中提供了高速的.可伸缩性的.面向快的.非阻塞的IO操作
+		如:
+			注册:当有连接来了,注册监听
+			发数据:通知网卡要发送数据后就干自己的事,网卡空闲后通知主线程空闲了,主线程再发送数据
+			收数据:客户端有数据到达才收到回调主线程处理数据,否则干自己的事
+
+	NIO Family 一览
+		Buffer缓存区:用于数据处理的基础单元,客户端发送于接受数据都通过Buffer转发进行
+		Channel通道:类似于流;但,不同于IN/OUT Stream;流具有独占性于单向性;通道则偏向于数据的流通多样性
+		Selectors选择器:处理客户端所有时间的分发器
+
+		Charset扩展部分
+			Charset字符编码:加密，解密
+			原生支持的,数据通道级别的数据处理方式,可以用于数传输级别的数据加密,解密等操作
 		
+		Buffer包括:ByteBuffer,CharBuffer,ShortBuffer,IntBuffer,LongBuffer,FloatBuffer,DoubleBuffer
+		于传统的不同,写数据时先写到Buffer -> Channel;读则反之
+		为NIO块状操作提供基础,数据按"块"进行传输
+		一个Buffer代表一块数据
+
+		可以从通道中获取数据也可以输出数据到通道,按"块"进行
+		可以并发异步读写数据
+		读取数据必须通过Buffer
+		包括:FileChannel，SocketChannel, DatagramChannel等
 		
+	NIO常用API学习
+				    NIO-职责
+				向Selector注册事件--当Channel可读/写-->处理到Buffer中
+		Selector-----|----Channel    Buffer
+				-----|----Channel    Buffer
+				-----|----Channel    Buffer
+						  多种Channel
+						  多种Buffer
+
+		SelectionKey.OP_CONNECT连接就绪
+		SelectionKey.OP_ACCEPT接受就绪
+		SelectionKey.OP_READ读就绪(读写取决于网卡状态)
+		SelectionKey.OP_WRITE写就绪
+
+		Selector使用流程
+			open()开启一个选择器,可以给选择器注册需要关注的事件
+			register()将一个Channel注册到选择器,当选择器触发对应关注事件时回调到Channel中,处理相关数据
+			select/selectNow()一个通道Channel,处理一个当前的可用,待处理的通道数据 -- 阻塞状态
+			selectedKeys()得到当前就绪的通道
+			warkeUp()唤醒一个处于select状态的选择器 -- 当阻塞状态时,返回0个Channel
+			close()关闭一个选择器,注册所有相关事件
 		
+		Selector注意事项
+			注册到选择器的通道必须为非阻塞状态
+			FileChannel不能用以Selector，因为FileChannel不能切换为非阻塞模式;套接字通道可以
+
+		Selector SelectionKey
+			Interest集合,Ready集合
+			Channel通道
+			Selector选择器
+			obj附加值(注册时可以附加)
+
+
+	NIO重写服务器
+		监听客户端到达
+		接收,并且回送客户端数据
+		转发客户端数据到另外一个客户端
+		多客户端的消息处理
+
+		现有线程模型
+				
+									   |--Channel -- Thread A,B
+							Selector --|--Channel -- Thread A,B
+							   |	   |--Channel -- Thread A,B	
+							   |
+							 Thread
+
+		单Thread模型
+							Thread
+							  |
+						   Selector
+							  |
+					--------------------
+					|		  |		   |
+					Channel  Channel   Channel
+
+		监听与数据处理线程分离
+		
+
+					Accepter						 Processor 
+					 Thread   ----------------------  Thread ------------|
+						|								 |  |		Processing________线程池
+						|                                |  |          loop
+			   ServerSocketChannel						 |  |			 | 			
+													     |	 ------------
+														 |
+													SocketChannel	
 		
 		
 		
