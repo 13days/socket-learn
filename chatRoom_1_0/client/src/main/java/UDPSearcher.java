@@ -25,7 +25,6 @@ public class UDPSearcher {
      */
     public static ServerInfo searchServer(int timeout) {
         System.out.println("UDPSearcher Started.");
-
         // 成功收到回送的栅栏
         CountDownLatch receiveLatch = new CountDownLatch(1);
         Listener listener = null;
