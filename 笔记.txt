@@ -461,7 +461,7 @@
 
 					Accepter						 Processor 
 					 Thread   ----------------------  Thread ------------|
-						|								 |  |		Processing________线程池
+						|								 |  |		Processing---------线程池
 						|                                |  |          loop
 			   ServerSocketChannel						 |  |			 | 			
 													     |	 ------------
