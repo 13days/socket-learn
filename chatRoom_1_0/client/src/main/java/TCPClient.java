@@ -47,7 +47,7 @@ public class TCPClient {
      * @param msg
      */
     public void send(String msg){
-        System.out.println("发送数据给服务器:" + msg);
+    //    System.out.println("发送数据给服务器:" + msg);
         printStream.println(msg);
     }
 

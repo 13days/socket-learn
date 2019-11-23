@@ -43,9 +43,9 @@ public class ClientHandler {
         this.readHandler = new ClientReadHandler(readSelector);
 
         // 写选择器
-        Selector writeSelecor  = Selector.open();
-        socketChannel.register(writeSelecor, SelectionKey.OP_WRITE);
-        this.writeHandler = new ClientWriteHandler(writeSelecor);
+        Selector writeSelector  = Selector.open();
+        socketChannel.register(writeSelector, SelectionKey.OP_WRITE);
+        this.writeHandler = new ClientWriteHandler(writeSelector);
 
 
         this.clientHandlerCallback = clientHandlerCallback;
@@ -136,17 +136,25 @@ public class ClientHandler {
                             break;
                         }
                         SelectionKey key = iterator.next();
-                        if(key.isAcceptable()){
-                             SocketChannel channel = (SocketChannel)key.channel();
+                        // 避免重复处理
+                        iterator.remove();
+                        // 一定要写对到底是哪种动作就绪了
+                        if(key.isReadable()){
+                            SocketChannel channel = (SocketChannel)key.channel();
 
-                             // 把数据读到Buffer里
+                            // 把数据读到Buffer里
                             byteBuffer.clear();
                             int read = channel.read(byteBuffer);
                             if(read>0){
-                                // 删除行结束符
+                                // 删除行结束符,避免出现两个
                                 String str = new String(byteBuffer.array(), 0, read-1);
                                 // 回调,通知到TCPServer
                                 clientHandlerCallback.onNewMessageArrived(ClientHandler.this, str);
+                            }else{
+                                System.out.println("客户端已无法读取数据!");
+                                // 退出当前客户端
+                                ClientHandler.this.exitBySelf();
+                                break;
                             }
                         }
                     }
