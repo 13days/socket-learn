@@ -467,7 +467,21 @@
 													     |	 ------------
 														 |
 													SocketChannel	
-		
+													
+                实现细节:
+					ioProvider --提供了常用操作的抽象
+							  |--注册输入channel及其回调,输出channel及其回调
+							  |--注销输入channel,输出channel
+							  |--输入回调的Runnable抽象
+							  |--输出回调的Runnable抽象
+				    IoArgs.IoArgsEventListener -- 提供Io实现开始和完成发生事件的抽象
+					SocketChannelAdapter.OnChannelStatusChangeListener  -- 信道状态变化事件的抽象
+					SocketChannelAdapter -- 提供对外发送和接受的实现适配
+										 -- 需要提供ioProvider的实现,OnChannelStatusChangeListener的实现
+										 -- 异步发送 -- 需要提供IoArgs.IoArgsEventListener实现--该方法实际是往ioProvider注册信道的回调
+										 -- 异步接受 -- 需要提供IoArgs.IoArgsEventListener实现--该方法实际是往ioProvider注册信道的回调
+										 -- 提供关闭 -- 注销信道,关闭信道,信道关闭回调
+										
 		
 		
 		

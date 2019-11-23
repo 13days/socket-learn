@@ -22,7 +22,7 @@ public class ClientTest {
 
         // 当前连接数量
         List<TCPClient> tcpClients = new ArrayList<>();
-        for(int i=0; i<1000; i++){
+        for(int i=0; i<100; i++){
             try {
                 TCPClient tcpClient = TCPClient.startWith(info);
                 tcpClients.add(tcpClient);

@@ -2,14 +2,11 @@ package handle;
 
 
 
-import com.sun.org.apache.bcel.internal.generic.Select;
+import core.Connector;
 import utils.CloseUtils;
 
 import java.io.*;
-import java.net.Socket;
-import java.nio.Buffer;
 import java.nio.ByteBuffer;
-import java.nio.channels.SelectableChannel;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
@@ -19,9 +16,10 @@ import java.util.concurrent.Executors;
 
 public class ClientHandler {
     private final SocketChannel socketChannel;
-    private final ClientReadHandler readHandler;
     private final ClientWriteHandler writeHandler;
     private final ClientHandlerCallback clientHandlerCallback;
+    private final Connector connector;
+
     // 客户端信息
     private final String clientInfo;
 
@@ -34,13 +32,20 @@ public class ClientHandler {
     public ClientHandler(SocketChannel socketChannel, ClientHandlerCallback clientHandlerCallback) throws IOException {
         this.socketChannel = socketChannel;
 
-        // 设置非阻塞模式
-        socketChannel.configureBlocking(false);
+        connector = new Connector(){
+            @Override
+            public void onChannelClosed(SocketChannel channel) {
+                super.onChannelClosed(channel);
+                exitBySelf();
+            }
 
-        // 读选择器
-        Selector readSelector  = Selector.open();
-        socketChannel.register(readSelector, SelectionKey.OP_READ);
-        this.readHandler = new ClientReadHandler(readSelector);
+            @Override
+            protected void onReceiveNewMessage(String str) {
+                super.onReceiveNewMessage(str);
+                clientHandlerCallback.onNewMessageArrived(ClientHandler.this, str);
+            }
+        };
+        connector.setup(socketChannel);
 
         // 写选择器
         Selector writeSelector  = Selector.open();
@@ -62,7 +67,7 @@ public class ClientHandler {
      * 提供给外部关闭掉客户端连接实例
      */
     public void exit() {
-        readHandler.exit();
+        CloseUtils.close(connector);
         writeHandler.exit();
         CloseUtils.close(socketChannel);
         System.out.println("客户端已退出：" + clientInfo);
@@ -76,12 +81,6 @@ public class ClientHandler {
         writeHandler.send(str);
     }
 
-    /**
-     * 从客户端读取信息并打印到屏幕 -- 线程启动,等待客户端发信息过来
-     */
-    public void readToPrint() {
-        readHandler.start();
-    }
 
     /**
      * 内部关闭

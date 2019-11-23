@@ -1,4 +1,6 @@
 import constants.TCPConstants;
+import core.IoContext;
+import impl.IoSelectorProvider;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,6 +8,8 @@ import java.io.InputStreamReader;
 
 public class Server {
     public static void main(String[] args) throws IOException {
+        IoContext ioContext = IoContext.setup().ioProvider(new IoSelectorProvider()).start();
+
         // TCP监听开启
         TCPServer tcpServer = new TCPServer(TCPConstants.PORT_SERVER);
         boolean isSucceed = tcpServer.start();
@@ -26,5 +30,7 @@ public class Server {
 
         UDPProvider.stop();
         tcpServer.stop();
+
+        ioContext.close();
     }
 }
