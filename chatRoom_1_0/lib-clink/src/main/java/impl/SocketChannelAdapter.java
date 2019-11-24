@@ -33,6 +33,8 @@ public class SocketChannelAdapter implements Sender, Receiver, Closeable {
         channel.configureBlocking(false);
     }
 
+    // todo 消息重复处理
+    // private boolean runed = false;
     // 输入回调具体实现
     private IoProvider.HandleInputCallback inputCallback = new IoProvider.HandleInputCallback() {
         @Override
@@ -40,6 +42,18 @@ public class SocketChannelAdapter implements Sender, Receiver, Closeable {
             if(isClosed.get()){
                 return;
             }
+
+            // todo 消息重复处理
+//            if(runed){
+//                return;
+//            }
+//            runed = true;
+//            try {
+//                Thread.sleep(5000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+
             IoArgs args = new IoArgs();
             IoArgs.IoArgsEventListener listener = SocketChannelAdapter.this.receiveIoEventListener;
             if(listener != null){

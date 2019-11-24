@@ -1,13 +1,11 @@
 package impl;
 
+import com.sun.security.ntlm.Server;
 import core.IoProvider;
 import utils.CloseUtils;
 
 import java.io.IOException;
-import java.nio.channels.ClosedChannelException;
-import java.nio.channels.SelectionKey;
-import java.nio.channels.Selector;
-import java.nio.channels.SocketChannel;
+import java.nio.channels.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -42,6 +40,7 @@ public class IoSelectorProvider implements IoProvider {
         this.outputHandlePool = Executors.newFixedThreadPool(4,
                 new IoProviderThreadFactory("IoProvider-Outuput-Thread-"));
 
+        // 读写selector监听异步线程在构造的时候就启动了
         startRead();
         startWrite();
     }
@@ -65,12 +64,20 @@ public class IoSelectorProvider implements IoProvider {
                         Set<SelectionKey> selectionKeys = readSelector.selectedKeys();
                         for (SelectionKey selectionKey : selectionKeys) {
                             if (selectionKey.isValid()) {
+                                // todo 测试ServerSocketChannel.accept() --> 客户端时SocketChannel
+                                // ServerSocketChannel channel = (ServerSocketChannel)selectionKey.channel();
+                                // channel.accept();
                                 // 处理每一个selectionKey
                                 // 异步的,马上返回的,读取会未执行完,会继续被捕获到
                                 // readSelector.select()会一直捕获到,所以需要取消对这个连接的读的监听,完成后再加回来
+                                Class<? extends SelectableChannel> aClass = selectionKey.channel().getClass();
+                                System.out.println("channel的类型为:"+aClass.getName());
                                 handleSelection(selectionKey, SelectionKey.OP_READ, inputCallbackMap, inputHandlePool);
                             }
                         }
+
+                        // System.out.println("收到消息个数:"+selectionKeys.size());
+
                         selectionKeys.clear();
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -141,7 +148,7 @@ public class IoSelectorProvider implements IoProvider {
     private static void handleSelection(SelectionKey selectionKey, int keyOps, HashMap<SelectionKey, Runnable> map, ExecutorService pool) {
         // 重点
         // 取消继续对keyOps的监听
-        selectionKey.interestOps(selectionKey.readyOps() & ~keyOps);
+        // selectionKey.interestOps(selectionKey.readyOps() & ~keyOps); // todo 消息重复处理
         Runnable runnable = null;
         try {
             runnable = map.get(selectionKey);

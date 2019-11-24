@@ -161,12 +161,12 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
                         if(key.isAcceptable()){
                             ServerSocketChannel serverSocketChannel = (ServerSocketChannel) key.channel();
                             // 当前accept是可用的,非阻塞状态拿到客户端
-                            SocketChannel sockelChannel = serverSocketChannel.accept();
+                            SocketChannel socketChannel = serverSocketChannel.accept();
 
 
                             try {
                                 // 客户端构建异步线程
-                                ClientHandler clientHandler = new ClientHandler(sockelChannel, TCPServer.this);
+                                ClientHandler clientHandler = new ClientHandler(socketChannel, TCPServer.this);
 
                                 // 添加同步处理
                                 synchronized (TCPServer.this) {
