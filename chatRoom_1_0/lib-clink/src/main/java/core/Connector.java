@@ -34,9 +34,10 @@ public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatu
     private void readNextMessage() {
         if (receiver != null) {
             try {
+                // 该连接异步接受消息的回调
                 receiver.receiveAsync(echoReceiveListener);
             } catch (IOException e) {
-                System.out.println("开始接收数据异常：" + e.getMessage());
+                System.out.println("异步接收数据异常：" + e.getMessage());
             }
         }
     }
@@ -63,7 +64,7 @@ public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatu
 
         @Override
         public void onCompleted(IoArgs args) {
-            // 打印
+            // 使用回调
             onReceiveNewMessage(args.bufferString());
             // 读取下一条数据
             readNextMessage();
@@ -71,6 +72,7 @@ public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatu
     };
 
     /**
+     * 真正处理数据的回调
      * 处理接收,直接打印到屏幕
      * @param str
      */

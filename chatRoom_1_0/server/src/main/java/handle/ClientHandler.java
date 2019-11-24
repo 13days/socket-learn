@@ -39,6 +39,7 @@ public class ClientHandler {
                 exitBySelf();
             }
 
+            // 重写连接的回调!!!
             @Override
             protected void onReceiveNewMessage(String str) {
                 super.onReceiveNewMessage(str);

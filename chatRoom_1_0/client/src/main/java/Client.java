@@ -38,6 +38,10 @@ public class Client {
             String str = input.readLine();
             // 发送到服务器
             tcpClient.send(str);
+            // todo 测试消息粘包
+//            tcpClient.send(str);
+//            tcpClient.send(str);
+//            tcpClient.send(str);
             if ("00bye00".equalsIgnoreCase(str)) {
                 break;
             }

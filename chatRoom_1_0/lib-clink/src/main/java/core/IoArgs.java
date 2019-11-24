@@ -8,6 +8,7 @@ import java.nio.channels.SocketChannel;
  * 封装读写
  */
 public class IoArgs {
+    // todo 单消息不完整-->把字节数变小
     private byte[] byteBuffer = new byte[256];
     private ByteBuffer buffer = ByteBuffer.wrap(byteBuffer);
 

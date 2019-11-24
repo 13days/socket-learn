@@ -484,7 +484,23 @@
 										 -- 异步发送 -- 需要提供IoArgs.IoArgsEventListener实现--该方法实际是往ioProvider注册信道的回调
 										 -- 异步接受 -- 需要提供IoArgs.IoArgsEventListener实现--该方法实际是往ioProvider注册信道的回调
 										 -- 提供关闭 -- 注销信道,关闭信道,信道关闭回调
-										
+										 
+				
+				版本v0.2.3--优化了读线程
+					TCPServer--ServerSocketChannel注册了ACCEPT--结束客户端的连接
+					接受到了客户端连接SocketChannel丢到ClientHandle里--异步线程处理
+					在ClientHandle里起了一个Connector()处理读 Conector().setup(SocketChannel)里起了一个IOProvider
+					IOProvider是一个程序启动时就构建在IOContext里的服务器处理支撑
+					IOProvider起了一个读和一个写的线程处理Selector
+					在setup()的时候就把ClientHandle的SoketChannel丢(register)进去,由IOProvider统一处理
+					处理过程是这样的,如果register过了,下次进来就不register了,只修改Channel绑定在IOProvider的Select里的key的ops
+					每次IoProvider处理完一个SocketChannel就丢弃它所对应的key的ops,因为是异步的,所以要避免重复处理
+					因为已经丢弃了,所以Connector要把他捞回来(毕竟连接还没断开呢,人家还要你继续处理呢)
+					所以是这样做的,Connector要传一个回调给IOProvider,这个回调的内容包括了读完数据要什么,当然也要包括重新注册(如果连接没断开的话)
+					所以当我們的一個任务行完了后,要使用這個回调,所以我們的回调应该包裝在一個Runnable里的,包装过程在register那里就完成了
+					register是锁定的,真正register进去的是<key,Runnable>,在SocketChannelAdapter里把inputCallback(Runnable)register进去
+					丢每个客户端连接都是new 一个SocketChannelAdapter的
+					
 	IO vs NIO
 		IO : 以流为导向,阻塞IO
 		NIO : 以缓冲区为导向,非阻塞IO,Select选择器
@@ -540,6 +556,11 @@
 		
 		m2(2)  m2(1)+m1  ==> 接收
 		m2+m1(2)  m1(1)  ==> 接收后 --> 消息不完整
+	
+	复现消息传输错误
+		多消息粘包
+		单消息不完整
+		消息到达后提醒重复触发(读消息时未设置取消监听)
 		
 		
 		

@@ -111,7 +111,9 @@ public class TCPClient {
                     }
                     if (str == null) {
                         System.out.println("连接已关闭，无法读取数据！");
-                        break;
+                        // todo 收到Null,说明连接断开了
+                        // System.out.println("有null字符串...");
+                       break;
                     }
                     // 打印到屏幕
                     System.out.println(str);

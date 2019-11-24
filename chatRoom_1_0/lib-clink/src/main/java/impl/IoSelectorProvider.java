@@ -66,7 +66,7 @@ public class IoSelectorProvider implements IoProvider {
                             if (selectionKey.isValid()) {
                                 // todo 测试ServerSocketChannel.accept() --> 客户端时SocketChannel
                                 // ServerSocketChannel channel = (ServerSocketChannel)selectionKey.channel();
-                                // channel.accept();
+                                // channel.accept(); ==> socketChannel
                                 // 处理每一个selectionKey
                                 // 异步的,马上返回的,读取会未执行完,会继续被捕获到
                                 // readSelector.select()会一直捕获到,所以需要取消对这个连接的读的监听,完成后再加回来
@@ -148,7 +148,8 @@ public class IoSelectorProvider implements IoProvider {
     private static void handleSelection(SelectionKey selectionKey, int keyOps, HashMap<SelectionKey, Runnable> map, ExecutorService pool) {
         // 重点
         // 取消继续对keyOps的监听
-        // selectionKey.interestOps(selectionKey.readyOps() & ~keyOps); // todo 消息重复处理
+        // 重点~~~异步丢任务了,收到就要马上取消丢读的监听,否则会一直读就绪,读到很多null,导致客户端收到null误以为连接断开
+        selectionKey.interestOps(selectionKey.readyOps() & ~keyOps);
         Runnable runnable = null;
         try {
             runnable = map.get(selectionKey);
@@ -184,7 +185,8 @@ public class IoSelectorProvider implements IoProvider {
     }
 
     /**
-     * 注册一个连接
+     * 注册一个SocketChanel到selector中,发挥selector多路复用的优势,监听该channel的事件,channel的回调存在map里
+     * 线程池会统一处理这些回调
      * @param channel
      * @param selector
      * @param registerOps

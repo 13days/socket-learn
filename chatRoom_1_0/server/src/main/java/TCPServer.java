@@ -107,6 +107,8 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
      */
     @Override
     public void onNewMessageArrived(final ClientHandler handler, String msg) {
+        // todo 消息粘包
+        // System.out.println(msg.replace("\r\n","-\\r\\n-"));
         // 异步转发任务
         forwardingThreadPoolExecutor.execute (()->{
             synchronized (TCPServer.this){

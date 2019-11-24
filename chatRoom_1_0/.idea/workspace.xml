@@ -2,31 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09ab73a6-0867-4995-97eb-fd40ab9ab435" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/test/java/testClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/test/java/testNio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/TCPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/TCPClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/TCPClient$ReadHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/TCPClient$ReadHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/test-classes/testNio.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/test-classes/testNio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-clink/src/main/java/core/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/src/main/java/core/Connector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-clink/src/main/java/core/IoArgs.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/src/main/java/core/IoArgs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib-clink/src/main/java/impl/IoSelectorProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/src/main/java/impl/IoSelectorProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-clink/src/main/java/impl/SocketChannelAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/src/main/java/impl/SocketChannelAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib-clink/target/classes/core/Connector$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/target/classes/core/Connector$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib-clink/target/classes/core/Connector.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/target/classes/core/Connector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-clink/target/classes/core/IOContext$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/target/classes/core/IOContext$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-clink/target/classes/core/IOContext$StartedBoot.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/target/classes/core/IOContext$StartedBoot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-clink/target/classes/core/IOContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/target/classes/core/IOContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib-clink/target/classes/impl/IoSelectorProvider$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/target/classes/impl/IoSelectorProvider$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-clink/target/classes/impl/IoSelectorProvider$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/target/classes/impl/IoSelectorProvider$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib-clink/target/classes/impl/IoSelectorProvider$IoProviderThreadFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/target/classes/impl/IoSelectorProvider$IoProviderThreadFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib-clink/target/classes/impl/IoSelectorProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/target/classes/impl/IoSelectorProvider.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib-clink/target/classes/impl/SocketChannelAdapter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/target/classes/impl/SocketChannelAdapter$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib-clink/target/classes/impl/SocketChannelAdapter$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/target/classes/impl/SocketChannelAdapter$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib-clink/target/classes/impl/SocketChannelAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/target/classes/impl/SocketChannelAdapter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/TCPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/TCPServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/handle/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/handle/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/TCPServer$ClientListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/TCPServer$ClientListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/TCPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/TCPServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/classes/handle/ClientHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/handle/ClientHandler$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/classes/handle/ClientHandler$ClientReadHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/handle/ClientHandler$ClientReadHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/classes/handle/ClientHandler$ClientWriteHandler$WriteRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/handle/ClientHandler$ClientWriteHandler$WriteRunnable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/classes/handle/ClientHandler$ClientWriteHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/handle/ClientHandler$ClientWriteHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/classes/handle/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/handle/ClientHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../笔记.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../笔记.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/foo/target/" />
@@ -48,15 +49,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/IoSelectorProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-821">
-              <caret line="78" column="27" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="27" />
+            <state relative-caret-position="2489">
+              <caret line="197" column="32" selection-start-line="197" selection-start-column="32" selection-end-line="197" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#startWrite#0;class#IoSelectorProvider#0" />
                 <element signature="method#waitSelection#0;class#IoSelectorProvider#0" />
+                <element signature="method#handleSelection#0;class#IoSelectorProvider#0" />
                 <element signature="method#registerOutput#0;class#IoSelectorProvider#0" />
-                <element signature="e#5918#5919#0" expanded="true" />
-                <element signature="e#5994#5995#0" expanded="true" />
                 <element signature="method#unRegisterOutput#0;class#IoSelectorProvider#0" />
                 <element signature="method#close#0;class#IoSelectorProvider#0" />
               </folding>
@@ -65,34 +64,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/test/java/testClient.java">
+        <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/IoArgs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="190">
+              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/src/test/java/testNio.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/Server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="10" column="67" lean-forward="true" selection-start-line="10" selection-start-column="67" selection-end-line="10" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -100,8 +78,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/src/main/java/TCPServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+            <state relative-caret-position="242">
+              <caret line="110" column="29" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/main/java/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="43" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -109,10 +96,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/src/main/java/handle/ClientHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+            <state relative-caret-position="220">
+              <caret line="101" column="13" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2211#2212#0" expanded="true" />
+                <element signature="e#2249#2250#0" expanded="true" />
+                <element signature="class#ClientReadHandler#0;class#ClientHandler#0" />
+                <element signature="class#ClientWriteHandler#0;class#ClientHandler#0" />
               </folding>
             </state>
           </provider>
@@ -121,8 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/Connector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="551">
+              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,17 +122,38 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/IoContext.java">
+        <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/IoProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-181">
-              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+            <state relative-caret-position="171">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
-                <element signature="e#296#297#0" expanded="true" />
-                <element signature="e#329#330#0" expanded="true" />
-                <element signature="e#365#366#0" expanded="true" />
-                <element signature="e#396#397#0" expanded="true" />
-                <element signature="e#436#437#0" expanded="true" />
-                <element signature="e#477#478#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#563#564#0" expanded="true" />
+                <element signature="e#605#606#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/Receiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/Sender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -150,25 +162,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/SocketChannelAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10">
-              <caret line="83" column="15" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
+            <state relative-caret-position="508">
+              <caret line="38" column="56" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/util/concurrent/atomic/AtomicBoolean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="84" column="25" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
-              <folding>
-                <element signature="e#1819#1820#0" expanded="true" />
-                <element signature="e#1852#1853#0" expanded="true" />
-                <element signature="e#3250#3251#0" expanded="true" />
-                <element signature="e#3290#3291#0" expanded="true" />
+                <element signature="e#1168#2252#0" expanded="true" />
+                <element signature="e#2251#2252#0" expanded="true" />
+                <element signature="e#2332#2605#0" expanded="true" />
+                <element signature="e#2604#2605#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -197,6 +198,9 @@
       <find>receiveIoEventListener</find>
       <find>test</find>
       <find>todo</find>
+      <find>System.out</find>
+      <find>连接已关闭，无法读取数据！</find>
+      <find>真正</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -205,31 +209,31 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/src/main/java/Client.java" />
         <option value="$PROJECT_DIR$/client/src/test/java/Test.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/UDPProvider.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/UDPSearcher.java" />
         <option value="$PROJECT_DIR$/client/src/test/java/myTest.java" />
-        <option value="$PROJECT_DIR$/client/src/main/java/TCPClient.java" />
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/core/Receiver.java" />
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/core/HandleInputCallbackImpl.java" />
         <option value="$PROJECT_DIR$/lib-clink/pom.xml" />
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/core/Sender.java" />
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/core/IoPrivider.java" />
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/core/IoProvider.java" />
-        <option value="$PROJECT_DIR$/lib-clink/src/main/java/core/IoArgs.java" />
-        <option value="$PROJECT_DIR$/server/src/main/java/handle/ClientHandler.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/Server.java" />
         <option value="$PROJECT_DIR$/client/src/test/java/ClientTest.java" />
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/core/IOContext.java" />
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/core/IoContext.java" />
-        <option value="$PROJECT_DIR$/lib-clink/src/main/java/core/Connector.java" />
         <option value="$PROJECT_DIR$/client/pom.xml" />
         <option value="$PROJECT_DIR$/client/src/test/java/testClient.java" />
-        <option value="$PROJECT_DIR$/server/src/main/java/TCPServer.java" />
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/impl/SocketChannelAdapter.java" />
-        <option value="$PROJECT_DIR$/lib-clink/src/main/java/impl/IoSelectorProvider.java" />
         <option value="$PROJECT_DIR$/client/src/test/java/testNio.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/TCPClient.java" />
+        <option value="$PROJECT_DIR$/lib-clink/src/main/java/impl/IoSelectorProvider.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/TCPServer.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/handle/ClientHandler.java" />
+        <option value="$PROJECT_DIR$/lib-clink/src/main/java/core/Connector.java" />
+        <option value="$PROJECT_DIR$/lib-clink/src/main/java/core/IoArgs.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/Client.java" />
       </list>
     </option>
   </component>
@@ -325,6 +329,15 @@
               <item name="chatRoom_1_0" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chatRoom-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chatRoom_1_0" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -368,14 +381,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chatRoom-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="chatRoom_1_0" type="462c0819:PsiDirectoryNode" />
               <item name="lib-clink" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chatRoom-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -511,12 +526,12 @@
       <option name="presentableId" value="Default" />
       <updated>1573974096238</updated>
       <workItem from="1573974098597" duration="21149000" />
-      <workItem from="1574140514943" duration="41268000" />
+      <workItem from="1574140514943" duration="53574000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62417000" />
+    <option name="totallyTimeSpent" value="74723000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -531,13 +546,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.59490085" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.27903682" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.059490085" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.33569404" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.57648724" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -556,46 +571,86 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/Server.java</url>
           <line>12</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/handle/ClientHandler.java</url>
-          <line>145</line>
+          <line>146</line>
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/handle/ClientHandler.java</url>
-          <line>129</line>
+          <line>130</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/client/src/test/java/ClientTest.java</url>
           <line>16</line>
           <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lib-clink/src/main/java/impl/IoSelectorProvider.java</url>
-          <line>51</line>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/client/src/main/java/TCPClient.java</url>
+          <line>101</line>
           <properties />
-          <option name="timeStamp" value="32" />
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/client/src/main/java/Client.java</url>
-          <line>9</line>
+          <line>37</line>
           <properties />
-          <option name="timeStamp" value="37" />
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/client/src/main/java/TCPClient.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/TCPServer.java</url>
+          <line>112</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/handle/ClientHandler.java</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/TCPServer.java</url>
+          <line>88</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/client/src/main/java/TCPClient.java</url>
+          <line>112</line>
+          <properties />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/lib-clink/src/main/java/core/Receiver.java</url>
           <line>6</line>
           <properties class="core.Receiver" method="receiveAsync">
@@ -603,7 +658,7 @@
           </properties>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
+        <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/client/src/test/java/testClient.java</url>
           <line>10</line>
           <properties class="testClient" method="main">
@@ -613,6 +668,25 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>args.bufferString()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>args.bufferString().length()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>msg</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/foo/src/main/java/constants/TCPConstants.java">
@@ -747,16 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/Sender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/util/concurrent/ThreadFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -797,16 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
           <caret line="1202" column="28" lean-forward="true" selection-start-line="1202" selection-start-column="28" selection-end-line="1202" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/IoArgs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -932,102 +986,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main/java/TCPClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#ReadHandler#0;class#TCPClient#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main/java/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="698" column="29" selection-start-line="698" selection-start-column="29" selection-end-line="698" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/IoProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#605#606#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/Receiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/IoContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-181">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding>
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/Connector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/handle/ClientHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="10" column="67" lean-forward="true" selection-start-line="10" selection-start-column="67" selection-end-line="10" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/TCPServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/util/concurrent/atomic/AtomicBoolean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
@@ -1037,33 +995,6 @@
             <element signature="e#1852#1853#0" expanded="true" />
             <element signature="e#3250#3251#0" expanded="true" />
             <element signature="e#3290#3291#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/SocketChannelAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="83" column="15" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/IoSelectorProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-821">
-          <caret line="78" column="27" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#startWrite#0;class#IoSelectorProvider#0" />
-            <element signature="method#waitSelection#0;class#IoSelectorProvider#0" />
-            <element signature="method#registerOutput#0;class#IoSelectorProvider#0" />
-            <element signature="e#5918#5919#0" expanded="true" />
-            <element signature="e#5994#5995#0" expanded="true" />
-            <element signature="method#unRegisterOutput#0;class#IoSelectorProvider#0" />
-            <element signature="method#close#0;class#IoSelectorProvider#0" />
           </folding>
         </state>
       </provider>
@@ -1080,11 +1011,173 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/test/java/testNio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
+        <state relative-caret-position="238">
           <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="381" column="29" selection-start-line="381" selection-start-column="29" selection-end-line="381" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/lang/ref/Reference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="152" selection-start-line="152" selection-end-line="152" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/TCPClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-314">
+          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="698" column="29" selection-start-line="698" selection-start-column="29" selection-end-line="698" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/IoContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#396#397#0" expanded="true" />
+            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/Sender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/Receiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/Connector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/IoProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/SocketChannelAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="38" column="56" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1168#2252#0" expanded="true" />
+            <element signature="e#2251#2252#0" expanded="true" />
+            <element signature="e#2332#2605#0" expanded="true" />
+            <element signature="e#2604#2605#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/IoSelectorProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2489">
+          <caret line="197" column="32" selection-start-line="197" selection-start-column="32" selection-end-line="197" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#waitSelection#0;class#IoSelectorProvider#0" />
+            <element signature="method#handleSelection#0;class#IoSelectorProvider#0" />
+            <element signature="method#registerOutput#0;class#IoSelectorProvider#0" />
+            <element signature="method#unRegisterOutput#0;class#IoSelectorProvider#0" />
+            <element signature="method#close#0;class#IoSelectorProvider#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/IoArgs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/handle/ClientHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="101" column="13" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2211#2212#0" expanded="true" />
+            <element signature="e#2249#2250#0" expanded="true" />
+            <element signature="class#ClientReadHandler#0;class#ClientHandler#0" />
+            <element signature="class#ClientWriteHandler#0;class#ClientHandler#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/TCPServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="110" column="29" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="43" selection-end-column="34" />
         </state>
       </provider>
     </entry>
