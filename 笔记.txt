@@ -562,7 +562,36 @@
 		单消息不完整
 		消息到达后提醒重复触发(读消息时未设置取消监听)
 		
+	如何有序的混传数据
+		数据传输加上开始结束标记
+		数据传输使用固定头部的方案
+		混合方案:固定头部,数据加密,数据描述
 		
+		起始符方案
+			如:\0开始字符 + 消息 + \n换行符
+		
+		固定头部描述方案:
+			头部加4个描述符 --> int:后面字节的长度,如100+100给字节
+		
+		HTTP精髓:
+			HTTP如何识别一个请求
+			HTTP如何读取请求头,请求头协议是怎样的
+			HTTP如何接受数据包体
+			当数据为文件时,HTTP如何判断文件接收到底
+			
+			HTTP 1.X
+				请求头--请求头长度--请求头描述
+				空行+数据
+			
+			HTTP 2.X
+				HTTP 1.1 Hearder ---> HTTP 2.0 的HEADERS frame
+				         Data    --->            Data frame
+				
+				connection
+					多次头请求,多次返回,不需要再三次握手
+
+					Header 9-byte
+						length+type+flags+R+StreamIdentifier+FlamePayload...
 		
 		
 		

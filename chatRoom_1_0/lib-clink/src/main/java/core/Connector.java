@@ -1,7 +1,11 @@
 package core;
 
 
+import box.StringReceivePacket;
+import box.StringSendPacket;
 import impl.SocketChannelAdapter;
+import impl.async.AsyncReceiveDispatcher;
+import impl.async.AsyncSendDispatcher;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -17,6 +21,9 @@ public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatu
     private Sender sender;
     private Receiver receiver;
 
+    private SendDispatcher sendDispatcher;
+    private ReceiveDispatcher receiveDispatcher;
+
     public void setup(SocketChannel socketChannel) throws IOException {
         this.channel = socketChannel;
 
@@ -27,24 +34,27 @@ public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatu
         this.sender = adapter;
         this.receiver = adapter;
 
-        // 读数据
-        readNextMessage();
+
+        sendDispatcher = new AsyncSendDispatcher(sender);
+        receiveDispatcher = new AsyncReceiveDispatcher(receiver, receivePacketCallback);
+
+        // 启动接受
+        receiveDispatcher.start();
     }
 
-    private void readNextMessage() {
-        if (receiver != null) {
-            try {
-                // 该连接异步接受消息的回调
-                receiver.receiveAsync(echoReceiveListener);
-            } catch (IOException e) {
-                System.out.println("异步接收数据异常：" + e.getMessage());
-            }
-        }
+    public void send(String msg){
+        SendPacket packet = new StringSendPacket(msg);
+        this.sendDispatcher.send(packet);
     }
+
 
     @Override
     public void close() throws IOException {
-
+        receiveDispatcher.close();
+        sendDispatcher.close();
+        sender.close();
+        receiver.close();
+        channel.close();
     }
 
     @Override
@@ -54,24 +64,6 @@ public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatu
 
 
     /**
-     * 接收监听
-     */
-    private IoArgs.IoArgsEventListener echoReceiveListener = new IoArgs.IoArgsEventListener() {
-        @Override
-        public void onStarted(IoArgs args) {
-
-        }
-
-        @Override
-        public void onCompleted(IoArgs args) {
-            // 使用回调
-            onReceiveNewMessage(args.bufferString());
-            // 读取下一条数据
-            readNextMessage();
-        }
-    };
-
-    /**
      * 真正处理数据的回调
      * 处理接收,直接打印到屏幕
      * @param str
@@ -79,4 +71,15 @@ public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatu
     protected void onReceiveNewMessage(String str) {
         System.out.println(key.toString() + ":" + str);
     }
+
+
+    private ReceiveDispatcher.ReceivePacketCallback receivePacketCallback = new ReceiveDispatcher.ReceivePacketCallback() {
+        @Override
+        public void onReceivePacketCompleted(ReceivePacket packet) {
+            if(packet instanceof StringReceivePacket){
+                String msg = ((StringReceivePacket)packet).string();
+                onReceiveNewMessage(msg);
+            }
+        }
+    };
 }

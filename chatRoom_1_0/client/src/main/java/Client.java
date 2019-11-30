@@ -1,12 +1,16 @@
 
 
 import bean.ServerInfo;
+import core.IoContext;
+import impl.IoSelectorProvider;
 
 import java.io.*;
 import java.net.Socket;
 
 public class Client {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        IoContext.setup().ioProvider(new IoSelectorProvider()).start();
+
         ServerInfo info = UDPSearcher.searchServer(10000);
         System.out.println("Server:" + info);
 
@@ -26,6 +30,8 @@ public class Client {
                 }
             }
         }
+
+        IoContext.close();
     }
 
     private static void write(TCPClient tcpClient) throws IOException {
@@ -39,9 +45,9 @@ public class Client {
             // 发送到服务器
             tcpClient.send(str);
             // todo 测试消息粘包
-//            tcpClient.send(str);
-//            tcpClient.send(str);
-//            tcpClient.send(str);
+            tcpClient.send(str);
+            tcpClient.send(str);
+            tcpClient.send(str);
             if ("00bye00".equalsIgnoreCase(str)) {
                 break;
             }

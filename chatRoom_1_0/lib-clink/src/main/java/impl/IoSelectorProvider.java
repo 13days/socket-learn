@@ -70,8 +70,8 @@ public class IoSelectorProvider implements IoProvider {
                                 // 处理每一个selectionKey
                                 // 异步的,马上返回的,读取会未执行完,会继续被捕获到
                                 // readSelector.select()会一直捕获到,所以需要取消对这个连接的读的监听,完成后再加回来
-                                Class<? extends SelectableChannel> aClass = selectionKey.channel().getClass();
-                                System.out.println("channel的类型为:"+aClass.getName());
+                                // Class<? extends SelectableChannel> aClass = selectionKey.channel().getClass();
+                                // System.out.println("channel的类型为:"+aClass.getName());
                                 handleSelection(selectionKey, SelectionKey.OP_READ, inputCallbackMap, inputHandlePool);
                             }
                         }
@@ -262,7 +262,7 @@ public class IoSelectorProvider implements IoProvider {
             inputHandlePool.shutdown();
             outputHandlePool.shutdown();
 
-            // 情况key-runnbale
+            // 情况key-runnable
             inputCallbackMap.clear();
             outputCallbackMap.clear();
 
