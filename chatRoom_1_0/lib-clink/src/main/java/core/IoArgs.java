@@ -3,54 +3,78 @@ package core;
 import java.io.EOFException;
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.nio.channels.ReadableByteChannel;
 import java.nio.channels.SocketChannel;
+import java.nio.channels.WritableByteChannel;
 
 /**
- * 封装读写
+ * IoArgs是最底层的封装,进行网络通道输入输出
  */
 public class IoArgs {
-    // todo 单消息不完整-->把字节数变小
     private int limit = 256;
-    private byte[] byteBuffer = new byte[256];
-    private ByteBuffer buffer = ByteBuffer.wrap(byteBuffer);
-
+    private ByteBuffer buffer = ByteBuffer.allocate(256);
 
     /**
-     * 读取
-     * @param bytes
-     * @param offset
-     * @return
+     * 从bytes数组进行消费
      */
-    public int readFrom(byte[] bytes, int offset){
-        int size = Math.min(bytes.length-offset, buffer.remaining());
+    public int readFrom(byte[] bytes, int offset, int count) {
+        int size = Math.min(count, buffer.remaining());
+        if (size <= 0) {
+            return 0;
+        }
         buffer.put(bytes, offset, size);
         return size;
     }
 
     /**
-     * 写数据到bytes
-     * @param bytes
-     * @param offset
-     * @return
+     * 写入数据到bytes中
      */
-    public int writeTo(byte[] bytes, int offset){
-        int size = Math.min(bytes.length-offset, buffer.remaining());
+    public int writeTo(byte[] bytes, int offset) {
+        int size = Math.min(bytes.length - offset, buffer.remaining());
         buffer.get(bytes, offset, size);
         return size;
     }
 
     /**
-     * 从SocketChannel 读数据
-     * @param channel
-     * @return
-     * @throws IOException
+     * 从bytes中读取数据
      */
-    public int readFrom(SocketChannel channel) throws IOException{
-        startWriting();
+    public int readFrom(ReadableByteChannel channel) throws IOException {
         int bytesProduced = 0;
-        while(buffer.hasRemaining()){
+        while (buffer.hasRemaining()) {
             int len = channel.read(buffer);
-            if(len<0){
+            if (len < 0) {
+                throw new EOFException();
+            }
+            bytesProduced += len;
+        }
+        return bytesProduced;
+    }
+
+    /**
+     * 写入数据到bytes中
+     */
+    public int writeTo(WritableByteChannel channel) throws IOException {
+        int bytesProduced = 0;
+        while (buffer.hasRemaining()) {
+            int len = channel.write(buffer);
+            if (len < 0) {
+                throw new EOFException();
+            }
+            bytesProduced += len;
+        }
+        return bytesProduced;
+    }
+
+    /**
+     * 从SocketChannel读取数据
+     */
+    public int readFrom(SocketChannel channel) throws IOException {
+        startWriting();
+
+        int bytesProduced = 0;
+        while (buffer.hasRemaining()) {
+            int len = channel.read(buffer);
+            if (len < 0) {
                 throw new EOFException();
             }
             bytesProduced += len;
@@ -61,16 +85,13 @@ public class IoArgs {
     }
 
     /**
-     * 从socketCannel中写数据
-     * @param channel
-     * @return
-     * @throws IOException
+     * 写数据到SocketChannel
      */
-    public int writeTo (SocketChannel channel)throws IOException{
+    public int writeTo(SocketChannel channel) throws IOException {
         int bytesProduced = 0;
-        while(buffer.hasRemaining()){
+        while (buffer.hasRemaining()) {
             int len = channel.write(buffer);
-            if(len<0){
+            if (len < 0) {
                 throw new EOFException();
             }
             bytesProduced += len;
@@ -78,36 +99,32 @@ public class IoArgs {
         return bytesProduced;
     }
 
-
     /**
-     * 开始写如数据到IoArgs
+     * 开始写入数据到IoArgs
      */
-    public void startWriting(){
+    public void startWriting() {
         buffer.clear();
-        // 定义容纳取键
+        // 定义容纳区间
         buffer.limit(limit);
     }
 
     /**
-     * 写完数据
+     * 写完数据后调用
      */
-    public void finishWriting(){
+    public void finishWriting() {
         buffer.flip();
     }
 
     /**
-     * 单次写操作的容纳区间
-     * @param limit
+     * 设置单次写操作的容纳区间
+     *
+     * @param limit 区间大小
      */
-    public void limit(int limit){
-        this.limit = limit;
+    public void limit(int limit) {
+        this.limit = Math.min(limit, buffer.capacity());
     }
 
-    public void writeLength(int total) {
-        buffer.putInt(total);
-    }
-
-    public int readLength(){
+    public int readLength() {
         return buffer.getInt();
     }
 
@@ -115,20 +132,59 @@ public class IoArgs {
         return buffer.capacity();
     }
 
+    public boolean remained() {
+        return buffer.remaining() > 0;
+    }
+
     /**
-     * 监听接口
+     * 填充数据
+     *
+     * @param size 想要填充数据的长度
+     * @return 真实填充数据的长度
      */
-    public interface IoArgsEventListener {
+    public int fillEmpty(int size) {
+        int fillSize = Math.min(size, buffer.remaining());
+        buffer.position(buffer.position() + fillSize);
+        return fillSize;
+    }
+
+    /**
+     * 清空部分数据
+     *
+     * @param size 想要清空的数据长度
+     * @return 真实清空的数据长度
+     */
+    public int setEmpty(int size) {
+        int emptySize = Math.min(size, buffer.remaining());
+        buffer.position(buffer.position() + emptySize);
+        return emptySize;
+    }
+
+
+    /**
+     * IoArgs 提供者、处理者；数据的生产或消费者
+     */
+    public interface IoArgsEventProcessor {
         /**
-         * 开启回调方法
-         * @param args
+         * 提供一份可消费的IoArgs
+         *
+         * @return IoArgs
          */
-        void onStarted(IoArgs args);
+        IoArgs provideIoArgs();
 
         /**
-         * 完成回调方法
-         * @param args
+         * 消费失败时回调
+         *
+         * @param args IoArgs
+         * @param e    异常信息
          */
-        void onCompleted(IoArgs args);
+        void onConsumeFailed(IoArgs args, Exception e);
+
+        /**
+         * 消费成功
+         *
+         * @param args IoArgs
+         */
+        void onConsumeCompleted(IoArgs args);
     }
 }

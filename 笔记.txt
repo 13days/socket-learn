@@ -592,6 +592,25 @@
 
 					Header 9-byte
 						length+type+flags+R+StreamIdentifier+FlamePayload...
+						
+
+9.文件传输
+	
+	最大的区别:文件数据bytes远远大于普通数据bytes
+	文件传输需分片,组装分片
+	文件传输如何中途取消而不影响后续的Packet发送
+		--取消发送空文件...
+	文件传输校验,保证数据准确性?
+	
+	文件数据分片
+		8765421
+		-->
+		8H 76H 54H 21H
+		
+	文件消息模型基础实现
+		Packet改成流传输
+		IoArgs改成流输入输出
+		Dispatcher调度逻辑调整
 		
 		
 		
