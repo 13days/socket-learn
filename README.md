@@ -14,5 +14,9 @@ Socket网络编程(java语言实现)
 
 在这个版本中,无法解决消息粘包,消息丢包等问题.
 
-服务器执行流程如下
+服务器执行流程如下:
+
+![image](https://github.com/13days/socket-learn/blob/master/png/1575118289(1).jpg)
+
+
 
