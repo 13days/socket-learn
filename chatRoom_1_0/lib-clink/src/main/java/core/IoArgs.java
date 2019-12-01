@@ -11,8 +11,8 @@ import java.nio.channels.WritableByteChannel;
  * IoArgs是最底层的封装,进行网络通道输入输出
  */
 public class IoArgs {
-    private int limit = 256;
-    private ByteBuffer buffer = ByteBuffer.allocate(256);
+    private int limit = 5;
+    private ByteBuffer buffer = ByteBuffer.allocate(5);
 
     /**
      * 从bytes数组进行消费
@@ -122,6 +122,12 @@ public class IoArgs {
      */
     public void limit(int limit) {
         this.limit = Math.min(limit, buffer.capacity());
+    }
+
+    public void writeLength(int total){
+        startWriting();
+        buffer.putInt(total);
+        finishWriting();
     }
 
     public int readLength() {
