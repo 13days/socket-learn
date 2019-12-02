@@ -17,10 +17,10 @@ public class FileSendPacket extends SendPacket<FileInputStream> {
         this.length = file.length();
     }
 
-//    @Override
-//    public byte type() {
-//        return TYPE_STREAM_FILE;
-//    }
+    @Override
+    public byte type() {
+        return TYPE_STREAM_FILE;
+    }
 
     /**
      * 使用File构建文件读取流，用以读取本地的文件数据进行发送

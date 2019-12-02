@@ -124,12 +124,6 @@ public class IoArgs {
         this.limit = Math.min(limit, buffer.capacity());
     }
 
-    public void writeLength(int total){
-        startWriting();
-        buffer.putInt(total);
-        finishWriting();
-    }
-
     public int readLength() {
         return buffer.getInt();
     }

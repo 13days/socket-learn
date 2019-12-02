@@ -2,6 +2,8 @@
 
 import bean.ServerInfo;
 import core.Connector;
+import core.Packet;
+import core.ReceivePacket;
 import utils.CloseUtils;
 
 import javax.jws.soap.SOAPBinding;
@@ -11,17 +13,20 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
 import java.nio.channels.SocketChannel;
+import java.util.UUID;
 
 /**
  * 可操作的TCP连接
  */
 public class TCPClient extends Connector {
+    private final File cachePath;
     /**
      * 私有构造方法
      * @throws IOException
      */
-    private TCPClient(SocketChannel socketChannel) throws IOException {
+    private TCPClient(SocketChannel socketChannel, File cachePath) throws IOException {
         setup(socketChannel);
+        this.cachePath = cachePath;
     }
 
     /**
@@ -36,7 +41,21 @@ public class TCPClient extends Connector {
     @Override
     public void onChannelClosed(SocketChannel channel) {
         super.onChannelClosed(channel);
-        System.out.println("连接已关闭");
+        System.out.println("连接已关闭，无法读取数据!");
+    }
+
+    @Override
+    protected File createNewReceiveFile() {
+        return Foo.createRandomTemp(cachePath);
+    }
+
+    @Override
+    protected void onReceivedPacket(ReceivePacket packet) {
+        super.onReceivedPacket(packet);
+        if(packet.type() == Packet.TYPE_MEMORY_STRING){
+            String string = (String) packet.entity();
+            System.out.println(key.toString() + ":" + string);
+        }
     }
 
     /**
@@ -45,7 +64,7 @@ public class TCPClient extends Connector {
      * @return
      * @throws IOException
      */
-    public static TCPClient startWith(ServerInfo info) throws IOException {
+    public static TCPClient startWith(ServerInfo info, File cachePath) throws IOException {
         SocketChannel socketChannel = SocketChannel.open();
 
         // 连接本地，端口2000；超时时间3000ms
@@ -57,7 +76,7 @@ public class TCPClient extends Connector {
 
         try {
 
-            return new TCPClient(socketChannel);
+            return new TCPClient(socketChannel, cachePath);
         } catch (Exception e) {
             System.out.println("连接异常");
             CloseUtils.close(socketChannel);

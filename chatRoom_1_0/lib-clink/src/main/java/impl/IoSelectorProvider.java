@@ -1,6 +1,5 @@
 package impl;
 
-import com.sun.security.ntlm.Server;
 import core.IoProvider;
 import utils.CloseUtils;
 
@@ -120,6 +119,46 @@ public class IoSelectorProvider implements IoProvider {
         thread.start();
     }
 
+    @Override
+    public boolean registerInput(SocketChannel channel, HandleInputCallback callback) {
+        return registerSelection(channel, readSelector, SelectionKey.OP_READ, inRegInput, inputCallbackMap, callback)!=null;
+    }
+
+    @Override
+    public boolean registerOutput(SocketChannel channel, HandleOutputCallback callback) {
+        return registerSelection(channel, writeSelector, SelectionKey.OP_WRITE, inRegOutput, outputCallbackMap, callback)!=null;
+    }
+
+    @Override
+    public void unRegisterInput(SocketChannel channel) {
+        unRegisterSelection(channel, readSelector, inputCallbackMap);
+    }
+
+    @Override
+    public void unRegisterOutput(SocketChannel channel) {
+        unRegisterSelection(channel, writeSelector, outputCallbackMap);
+    }
+
+    @Override
+    public void close() throws IOException {
+        if (isClosed.compareAndSet(false, true)) {
+            // 关闭线程池
+            inputHandlePool.shutdown();
+            outputHandlePool.shutdown();
+
+            // 情况key-runnable
+            inputCallbackMap.clear();
+            outputCallbackMap.clear();
+
+            // 唤醒阻塞
+            readSelector.wakeup();
+            writeSelector.wakeup();
+
+            CloseUtils.close(readSelector, writeSelector);
+        }
+    }
+
+
 
     /**
      * 等待
@@ -164,25 +203,6 @@ public class IoSelectorProvider implements IoProvider {
     }
 
 
-    @Override
-    public boolean registerInput(SocketChannel channel, HandleInputCallback callback) {
-        return registerSelection(channel, readSelector, SelectionKey.OP_READ, inRegInput, inputCallbackMap, callback)!=null;
-    }
-
-    @Override
-    public boolean registerOutput(SocketChannel channel, HandleOutputCallback callback) {
-        return registerSelection(channel, readSelector, SelectionKey.OP_WRITE, inRegOutput, outputCallbackMap, callback)!=null;
-    }
-
-    @Override
-    public void unRegisterInput(SocketChannel channel) {
-        unRegisterSelection(channel, readSelector, inputCallbackMap);
-    }
-
-    @Override
-    public void unRegisterOutput(SocketChannel channel) {
-        unRegisterSelection(channel, writeSelector, outputCallbackMap);
-    }
 
     /**
      * 注册一个SocketChanel到selector中,发挥selector多路复用的优势,监听该channel的事件,channel的回调存在map里
@@ -252,25 +272,6 @@ public class IoSelectorProvider implements IoProvider {
                 map.remove(key);
                 selector.wakeup();
             }
-        }
-    }
-
-    @Override
-    public void close() throws IOException {
-        if (isClosed.compareAndSet(false, true)) {
-            // 关闭线程池
-            inputHandlePool.shutdown();
-            outputHandlePool.shutdown();
-
-            // 情况key-runnable
-            inputCallbackMap.clear();
-            outputCallbackMap.clear();
-
-            // 唤醒阻塞
-            readSelector.wakeup();
-            writeSelector.wakeup();
-
-            CloseUtils.close(readSelector, writeSelector);
         }
     }
 

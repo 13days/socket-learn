@@ -612,6 +612,50 @@
 		IoArgs改成流输入输出
 		Dispatcher调度逻辑调整
 		
+	文件消息模型分片实现
+		发送中无法取消文件发送
+		大文件传输容错率较低
+		同一个链接无法实现文件,普通消息优先级
+		
+		分片数据流程传输
+			Packet ----write----> IoArgs
+			  ||                       |
+			 input -->buffer-->Frame---|
+			 Stream  |       |
+                     |_loop__|
+        逻辑
+			:根据文件大小计算分片,并且读取数据到分片
+			:分片数据固定打包发送
+			:分片数据解析与分片组装
+			:Dispatcher调度逻辑调整
+			大---中---小--->发送-->小--中--大
+			
+		
+		
+		分片消息规则
+			当前帧大小      --  2-byte 16位 65535 2^16-1 (0占一位)
+			帧类型          --  1-byte 8位 (如取消类型,关闭类型等)
+			帧标志信息      --  1-byte 8位 (加密,解密等)
+			对应包唯一标示  --  1-byte 8位 (标识1,头帧1,数据帧1, 下一个包2,3...可以实现并发255个包同时发送)
+			预留空间        --  1-byte 8位 (可能的扩展,如压缩)
+			数据区              Frame Payload
+			
+		Packet新规则
+			包头(4byte) ---> 首帧(内容,数据区放包体信息),先发送
+			包体        ---> 很多个帧
+		
+		Frame 数据结构
+			首帧HeadFrame数据内容
+			Length(5)
+			Type(8) Flags(8) Identifier(8) Other(8)
+			---------------------------------------
+			Data Length(5)
+			Data Type(1) Data head info(Max256)
+		
+			普通帧Frame
+			Length(5)
+			Type(8) Flaes(8) Identifier(8) Other(8)
+			Frame Payload(0...65535)
 		
 		
 		

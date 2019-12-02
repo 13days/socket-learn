@@ -7,29 +7,21 @@ import java.io.Closeable;
 import java.io.IOException;
 
 /**
- * 接受包实现
+ * 字符串接收包
  */
-public class StringReceivePacket extends ReceivePacket<ByteArrayOutputStream> {
+public class StringReceivePacket extends AbsByteArrayReceivePacket<String> {
 
-    private String string;
-
-    public StringReceivePacket(int len) {
-        this.length = len;
-    }
-
-
-    public String string(){
-        return string;
+    public StringReceivePacket(long len) {
+        super(len);
     }
 
     @Override
-    protected void closeStream(ByteArrayOutputStream stream) throws IOException {
-        super.closeStream(stream);
-        string = new String();
+    protected String buildEntity(ByteArrayOutputStream stream) {
+        return new String(stream.toByteArray());
     }
 
     @Override
-    protected ByteArrayOutputStream createStream() {
-        return new ByteArrayOutputStream((int) length);
+    public byte type() {
+        return TYPE_MEMORY_STRING;
     }
 }

@@ -1,7 +1,9 @@
+import box.FileSendPacket;
 import com.sun.org.apache.bcel.internal.generic.Select;
 import handle.ClientHandler;
 import utils.CloseUtils;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
@@ -18,6 +20,7 @@ import java.util.concurrent.Executors;
 
 public class TCPServer implements ClientHandler.ClientHandlerCallback {
     private final int port;
+    private final File cachePath;
     private ClientListener listener;
     private Selector selector;
     private ServerSocketChannel server;
@@ -31,8 +34,9 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
      * 配置
      * @param port
      */
-    public TCPServer(int port) {
+    public TCPServer(int port, File cachePath) {
         this.port = port;
+        this.cachePath = cachePath;
         forwardingThreadPoolExecutor = Executors.newSingleThreadExecutor ();
     }
 
@@ -43,19 +47,20 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
     public boolean start() {
         try {
             selector = Selector.open();
-            this.server = ServerSocketChannel.open();
-            // 设置为非阻塞模式
+            ServerSocketChannel server = ServerSocketChannel.open();
+            // 设置为非阻塞
             server.configureBlocking(false);
             // 绑定本地端口
-            server.bind(new InetSocketAddress(port));
-            // 创建客户端连接到达监听
+            server.socket().bind(new InetSocketAddress(port));
+            // 注册客户端连接到达监听
             server.register(selector, SelectionKey.OP_ACCEPT);
+
+            this.server = server;
 
             System.out.println("服务器信息：" + server.getLocalAddress().toString());
 
 
             ClientListener listener = this.listener = new ClientListener();
-            this.listener = listener;
             listener.start();
         } catch (IOException e) {
             e.printStackTrace();
@@ -79,6 +84,8 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
 
             clientHandlerList.clear();
         }
+        // 停止线程池
+        forwardingThreadPoolExecutor.shutdownNow();
     }
 
     /**
@@ -168,7 +175,7 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
 
                             try {
                                 // 客户端构建异步线程
-                                ClientHandler clientHandler = new ClientHandler(socketChannel, TCPServer.this);
+                                ClientHandler clientHandler = new ClientHandler(socketChannel, TCPServer.this, cachePath);
 
                                 // 添加同步处理
                                 synchronized (TCPServer.this) {

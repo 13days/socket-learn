@@ -1,6 +1,7 @@
 
 
 import bean.ServerInfo;
+import box.FileSendPacket;
 import core.IoContext;
 import impl.IoSelectorProvider;
 
@@ -9,15 +10,16 @@ import java.net.Socket;
 
 public class Client {
     public static void main(String[] args) throws IOException {
+        File cachePath = Foo.getCacheDir("client");
         IoContext.setup().ioProvider(new IoSelectorProvider()).start();
 
         ServerInfo info = UDPSearcher.searchServer(10000);
         System.out.println("Server:" + info);
 
-        TCPClient tcpClient = null;
         if (info != null) {
+            TCPClient tcpClient = null;
             try {
-                tcpClient = TCPClient.startWith(info);
+                tcpClient = TCPClient.startWith(info,cachePath);
                 if(tcpClient==null){
                     return;
                 }
@@ -42,15 +44,30 @@ public class Client {
         do {
             // 键盘读取一行
             String str = input.readLine();
+            if ("00bye00".equalsIgnoreCase(str)) {
+                break;
+            }
             // 发送到服务器
+            // --f url
+            if(str.startsWith("--f")){
+                String[] array = str.split(" ");
+                if(array.length>=2){
+                    String filePath = array[1];
+                    File file = new File(filePath);
+                    if(file.exists() && file.isFile()){
+                        FileSendPacket packet = new FileSendPacket(file);
+                        tcpClient.send(packet);
+                        continue;
+                    }
+                }
+            }
+            // 发送字符串
             tcpClient.send(str);
             // todo 测试消息粘包
             tcpClient.send(str);
             tcpClient.send(str);
             tcpClient.send(str);
-            if ("00bye00".equalsIgnoreCase(str)) {
-                break;
-            }
+
         } while (true);
     }
 }

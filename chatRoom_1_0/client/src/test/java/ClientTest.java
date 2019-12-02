@@ -1,5 +1,6 @@
 import bean.ServerInfo;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.CharBuffer;
@@ -14,6 +15,7 @@ public class ClientTest {
     private static boolean done = false;
 
     public static void main(String[] args) throws IOException, InterruptedException {
+        File cacjePath = Foo.getCacheDir("client/test");
         ServerInfo info =  UDPSearcher.searchServer(10000);
         System.out.println("Server:" + info);
         if(info == null){
@@ -24,7 +26,7 @@ public class ClientTest {
         List<TCPClient> tcpClients = new ArrayList<>();
         for(int i=0; i<100; i++){
             try {
-                TCPClient tcpClient = TCPClient.startWith(info);
+                TCPClient tcpClient = TCPClient.startWith(info, cacjePath);
                 tcpClients.add(tcpClient);
                 if(tcpClient == null){
                     System.out.println("连接异常");

@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.util.UUID;
 
 public class Foo {
+    // 缓存公共目录
     private static final String CACHE_DIR = "cache";
 
     public static File getCacheDir(String dir) {

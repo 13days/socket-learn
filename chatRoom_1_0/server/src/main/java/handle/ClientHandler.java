@@ -3,18 +3,16 @@ package handle;
 
 
 import core.Connector;
+import core.Packet;
+import core.ReceivePacket;
 import utils.CloseUtils;
 
 import java.io.*;
-import java.nio.ByteBuffer;
-import java.nio.channels.SelectionKey;
-import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
-import java.util.Iterator;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.UUID;
 
 public class ClientHandler extends Connector{
+    private File cachePath;
     private final ClientHandlerCallback clientHandlerCallback;
 
     // 客户端信息
@@ -26,9 +24,10 @@ public class ClientHandler extends Connector{
      * @param clientHandlerCallback
      * @throws IOException
      */
-    public ClientHandler(SocketChannel socketChannel, ClientHandlerCallback clientHandlerCallback) throws IOException {
+    public ClientHandler(SocketChannel socketChannel, ClientHandlerCallback clientHandlerCallback, File cachePath) throws IOException {
         this.clientHandlerCallback = clientHandlerCallback;
         this.clientInfo = socketChannel.getRemoteAddress().toString();
+        this.cachePath = cachePath;
 
         System.out.println("新客户端连接：" + clientInfo);
         setup(socketChannel);
@@ -49,6 +48,28 @@ public class ClientHandler extends Connector{
         exitBySelf();
     }
 
+    @Override
+    protected File createNewReceiveFile() {
+        String string = UUID.randomUUID().toString() + ".tmp";
+        File file = new File(cachePath, string);
+        try {
+            file.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return file;
+    }
+
+    @Override
+    protected void onReceivedPacket(ReceivePacket packet) {
+        super.onReceivedPacket(packet);
+        if(packet.type() == Packet.TYPE_MEMORY_STRING){
+            String string = (String) packet.entity();
+            System.out.println(key.toString() + ":" + string);
+            clientHandlerCallback.onNewMessageArrived(this, string);
+        }
+    }
+
     /**
      * 内部关闭
      */
@@ -57,11 +78,6 @@ public class ClientHandler extends Connector{
         clientHandlerCallback.onSelfClosed(this);
     }
 
-    @Override
-    protected void onReceiveNewMessage(String str) {
-        super.onReceiveNewMessage(str);
-        clientHandlerCallback.onNewMessageArrived(this, str);
-    }
 
     public String getClientInfo() {
         return this.clientInfo;
