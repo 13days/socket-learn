@@ -11,8 +11,9 @@ import java.nio.channels.WritableByteChannel;
  * IoArgs是最底层的封装,进行网络通道输入输出
  */
 public class IoArgs {
-    private int limit = 5;
-    private ByteBuffer buffer = ByteBuffer.allocate(5);
+    // 最少设置六个字节,头帧的长度为6个字节
+    private int limit = 6;
+    private ByteBuffer buffer = ByteBuffer.allocate(6);
 
     /**
      * 从bytes数组进行消费
@@ -36,7 +37,7 @@ public class IoArgs {
     }
 
     /**
-     * 从bytes中读取数据
+     * 从channel中读取数据
      */
     public int readFrom(ReadableByteChannel channel) throws IOException {
         int bytesProduced = 0;
@@ -51,7 +52,7 @@ public class IoArgs {
     }
 
     /**
-     * 写入数据到bytes中
+     * 写入数据到channel中
      */
     public int writeTo(WritableByteChannel channel) throws IOException {
         int bytesProduced = 0;

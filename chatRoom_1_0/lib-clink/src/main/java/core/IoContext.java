@@ -7,7 +7,7 @@ import java.io.IOException;
  * IO上下文
  */
 public class IoContext {
-    private static IoContext INSTANCE;
+    private volatile static IoContext INSTANCE;
     private final IoProvider ioProvider;
 
     public IoContext(IoProvider ioPrivider) {
@@ -48,6 +48,7 @@ public class IoContext {
         }
 
         public IoContext start(){
+
             if (INSTANCE == null) {
                synchronized (IoContext.class){
                    if(INSTANCE==null){

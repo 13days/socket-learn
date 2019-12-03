@@ -1,14 +1,9 @@
 import bean.ServerInfo;
+import foo.Foo;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.CharBuffer;
-import java.nio.channels.Channel;
-import java.nio.channels.FileChannel;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 public class ClientTest {

@@ -4,16 +4,13 @@ import bean.ServerInfo;
 import core.Connector;
 import core.Packet;
 import core.ReceivePacket;
+import foo.Foo;
 import utils.CloseUtils;
 
-import javax.jws.soap.SOAPBinding;
 import java.io.*;
 import java.net.Inet4Address;
 import java.net.InetSocketAddress;
-import java.net.Socket;
-import java.net.SocketTimeoutException;
 import java.nio.channels.SocketChannel;
-import java.util.UUID;
 
 /**
  * 可操作的TCP连接

@@ -38,6 +38,7 @@ public class AsyncPacketReader implements Closeable {
      */
     boolean requestTakePacket() {
         synchronized (this) {
+            // 如果优先列队里有帧存放,则不进行拿包,直接返回
             if (nodeSize >= 1) {
                 return true;
             }

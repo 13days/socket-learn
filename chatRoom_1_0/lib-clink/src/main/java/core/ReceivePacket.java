@@ -5,9 +5,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
- * 接受包的定义
- */
-/**
  * 接收包的定义
  */
 public abstract class ReceivePacket<Stream extends OutputStream, Entity> extends Packet<Stream> {

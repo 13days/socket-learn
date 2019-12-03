@@ -102,9 +102,9 @@ public abstract class Connector implements Closeable, SocketChannelAdapter.OnCha
 
         @Override
         public void onReceivePacketCompleted(ReceivePacket packet) {
-            if(packet instanceof StringReceivePacket){
+           // if(packet instanceof StringReceivePacket){
                 onReceivedPacket(packet);
-            }
+            //}
         }
     };
 }

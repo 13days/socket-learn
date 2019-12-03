@@ -5,11 +5,12 @@ package handle;
 import core.Connector;
 import core.Packet;
 import core.ReceivePacket;
+import foo.Foo;
 import utils.CloseUtils;
 
 import java.io.*;
 import java.nio.channels.SocketChannel;
-import java.util.UUID;
+
 
 public class ClientHandler extends Connector{
     private File cachePath;
@@ -50,14 +51,7 @@ public class ClientHandler extends Connector{
 
     @Override
     protected File createNewReceiveFile() {
-        String string = UUID.randomUUID().toString() + ".tmp";
-        File file = new File(cachePath, string);
-        try {
-            file.createNewFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return file;
+        return Foo.createRandomTemp(cachePath);
     }
 
     @Override

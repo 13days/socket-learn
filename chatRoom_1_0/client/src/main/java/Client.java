@@ -3,10 +3,10 @@
 import bean.ServerInfo;
 import box.FileSendPacket;
 import core.IoContext;
+import foo.Foo;
 import impl.IoSelectorProvider;
 
 import java.io.*;
-import java.net.Socket;
 
 public class Client {
     public static void main(String[] args) throws IOException {
