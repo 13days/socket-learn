@@ -2,31 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09ab73a6-0867-4995-97eb-fd40ab9ab435" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/TCPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/TCPClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/test/java/ClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/test/java/ClientTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/target/classes/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/target/classes/TCPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/TCPClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/target/test-classes/ClientTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/test-classes/ClientTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foo/src/main/java/Foo.java" beforeDir="false" afterPath="$PROJECT_DIR$/foo/src/main/java/foo/Foo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foo/target/classes/Foo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-clink/src/main/java/core/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/src/main/java/core/Connector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-clink/src/main/java/core/IoArgs.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/src/main/java/core/IoArgs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib-clink/src/main/java/core/IoContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/src/main/java/core/IoContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-clink/src/main/java/core/ReceivePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/src/main/java/core/ReceivePacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-clink/src/main/java/core/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/src/main/java/core/Receiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-clink/src/main/java/impl/async/AsyncPacketReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/src/main/java/impl/async/AsyncPacketReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-clink/src/main/java/impl/async/AsyncSendDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/src/main/java/impl/async/AsyncSendDispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-clink/target/classes/core/Connector$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/target/classes/core/Connector$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-clink/target/classes/core/IoArgs.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/target/classes/core/IoArgs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-clink/target/classes/core/ReceivePacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/target/classes/core/ReceivePacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-clink/target/classes/impl/async/AsyncPacketReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/target/classes/impl/async/AsyncPacketReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/handle/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/handle/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/handle/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/handle/ClientHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-clink/src/main/java/impl/async/AsyncPacketWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/src/main/java/impl/async/AsyncPacketWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-clink/src/main/java/utils/ByteUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-clink/src/main/java/utils/ByteUtils.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/client/target/" />
@@ -49,26 +28,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/async/AsyncReceiveDispatcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="104" column="28" lean-forward="true" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#888#889#0" expanded="true" />
-                <element signature="e#921#922#0" expanded="true" />
-                <element signature="e#1629#1630#0" expanded="true" />
-                <element signature="e#1671#1672#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/async/AsyncPacketWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="104" column="54" selection-start-line="104" selection-start-column="54" selection-end-line="104" selection-end-column="54" />
+            <state relative-caret-position="228">
+              <caret line="105" column="55" lean-forward="true" selection-start-line="105" selection-start-column="54" selection-end-line="105" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,23 +42,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/ReceiveFrameFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="317">
+              <caret line="25" column="37" lean-forward="true" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/IoContext.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-              <folding>
-                <element signature="e#365#366#0" expanded="true" />
-                <element signature="e#396#397#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/Frame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state relative-caret-position="323">
+              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
               <folding>
                 <element signature="e#2297#2298#0" expanded="true" />
                 <element signature="e#2356#2357#0" expanded="true" />
@@ -115,25 +65,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/Receiver.java">
+        <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/ReceiveEntityFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+            <state relative-caret-position="209">
+              <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#251#252#0" expanded="true" />
+                <element signature="e#280#281#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/SocketChannelAdapter.java">
+        <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/AbsReceiveFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="97" column="35" lean-forward="true" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
+            <state relative-caret-position="131">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1546#1547#0" expanded="true" />
-                <element signature="e#1594#1595#0" expanded="true" />
-                <element signature="e#2388#3287#0" expanded="true" />
-                <element signature="e#3286#3287#0" expanded="true" />
+                <element signature="e#695#696#0" expanded="true" />
+                <element signature="e#731#732#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/AbsSendFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,30 +107,43 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/IoArgs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="188" column="13" selection-start-line="188" selection-start-column="13" selection-end-line="188" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/IoProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            <state relative-caret-position="131">
+              <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
               <folding>
-                <element signature="e#563#564#0" expanded="true" />
-                <element signature="e#605#606#0" expanded="true" />
+                <element signature="e#2862#2863#0" expanded="true" />
+                <element signature="e#2925#2926#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/IoSelectorProvider.java">
+        <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/ReceiveHeaderFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="123" column="111" lean-forward="true" selection-start-line="123" selection-start-column="111" selection-end-line="123" selection-end-column="111" />
+            <state relative-caret-position="131">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              <folding>
+                <element signature="e#726#727#0" expanded="true" />
+                <element signature="e#756#757#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/test/java/ClientTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/main/java/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="13" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -212,7 +190,6 @@
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/box/FileSendPacket.java" />
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/box/FileReceivePacket.java" />
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/core/ReceiveDispatcher.java" />
-        <option value="$PROJECT_DIR$/client/src/test/java/ClientTest.java" />
         <option value="$PROJECT_DIR$/foo/src/main/java/Foo.java" />
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/core/SendPacket.java" />
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/core/ds/BytePriorityNode.java" />
@@ -226,7 +203,6 @@
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/frames/AbsReceiveFrame.java" />
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/frames/ReceiveHeaderFrame.java" />
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/frames/ReceiveEntityFrame.java" />
-        <option value="$PROJECT_DIR$/lib-clink/src/main/java/impl/async/AsyncPacketWriter.java" />
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/impl/async/AsyncReceiveDispatcher.java" />
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/impl/SocketChannelAdapter.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/Server.java" />
@@ -245,6 +221,9 @@
         <option value="$PROJECT_DIR$/server/src/main/java/handle/ClientHandler.java" />
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/frames/ReceiveFrameFactory.java" />
         <option value="$PROJECT_DIR$/lib-clink/src/main/java/core/IoContext.java" />
+        <option value="$PROJECT_DIR$/lib-clink/src/main/java/utils/ByteUtils.java" />
+        <option value="$PROJECT_DIR$/lib-clink/src/main/java/impl/async/AsyncPacketWriter.java" />
+        <option value="$PROJECT_DIR$/client/src/test/java/ClientTest.java" />
       </list>
     </option>
   </component>
@@ -303,6 +282,12 @@
               <item name="chatRoom-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="chatRoom_1_0" type="462c0819:PsiDirectoryNode" />
               <item name="cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chatRoom-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chatRoom_1_0" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chatRoom-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -474,6 +459,15 @@
             <path>
               <item name="chatRoom-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="chatRoom_1_0" type="462c0819:PsiDirectoryNode" />
+              <item name="lib-clink" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chatRoom-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chatRoom_1_0" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -541,6 +535,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ClientTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ClientTest" />
+      <module name="chatRoom-client" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Server" />
       <module name="chatRoom-server" />
@@ -551,6 +552,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Client" />
+        <item itemvalue="Application.ClientTest" />
         <item itemvalue="Application.Server" />
       </list>
     </recent_temporary>
@@ -566,19 +568,19 @@
       <option name="presentableId" value="Default" />
       <updated>1575116342007</updated>
       <workItem from="1575116344040" duration="798000" />
-      <workItem from="1575340449270" duration="15086000" />
+      <workItem from="1575340449270" duration="25087000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60489000" />
+    <option name="totallyTimeSpent" value="70490000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.86774194" visible="true" weight="0.19504021" />
-      <window_info id="Structure" order="1" sideWeight="0.13225806" side_tool="true" visible="true" weight="0.19504021" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.86644953" visible="true" weight="0.2600536" />
+      <window_info id="Structure" order="1" sideWeight="0.1335505" side_tool="true" visible="true" weight="0.2600536" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -586,8 +588,8 @@
       <window_info id="Favorites" order="6" sideWeight="0.50141644" side_tool="true" weight="0.28351206" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.17422096" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.12181303" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.19263457" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.13031161" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3611898" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -626,70 +628,16 @@
           <properties />
           <option name="timeStamp" value="46" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client/src/test/java/ClientTest.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/nio/channels/ReadableByteChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="105" column="15" selection-start-line="105" selection-start-column="15" selection-end-line="105" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/nio/channels/SocketChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="466" column="24" selection-start-line="466" selection-start-column="24" selection-end-line="466" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/jre/lib/rt.jar!/sun/nio/ch/SocketChannelImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="211" column="38" selection-start-line="211" selection-start-column="30" selection-end-line="211" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="554" column="13" selection-start-line="554" selection-start-column="13" selection-end-line="554" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/SendEntityFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/box/FileSendPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="28" column="3" lean-forward="true" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/util/concurrent/ExecutorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="136" column="17" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-923" />
@@ -704,33 +652,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib-clink/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main/java/TCPClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="43" column="34" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main/java/bean/ServerInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main/java/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/util/concurrent/atomic/AtomicBoolean.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -762,16 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/AbsSendFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/AbsSendPacketFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -796,35 +707,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/Packet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#537#538#0" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#1850#1851#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/ds/BytePriorityNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#211#212#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/async/AsyncPacketReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -843,30 +731,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/CancelReceiveFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/CancelSendFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/AbsReceiveFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -883,37 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/ReceiveHeaderFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/ReceiveEntityFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/async/AsyncSendDispatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="96" column="23" lean-forward="true" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/foo/src/main/java/foo/Foo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -925,20 +762,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-976">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/ReceivePacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#300#301#0" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -978,33 +801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/Connector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="90" column="33" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/ReceiveDispatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/IoSelectorProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="123" column="111" lean-forward="true" selection-start-line="123" selection-start-column="111" selection-end-line="123" selection-end-column="111" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/IoProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -1023,31 +819,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/SocketChannelAdapter.java">
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/main3.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/utils/ByteUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1330">
+          <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/CancelReceiveFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="97" column="35" lean-forward="true" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1546#1547#0" expanded="true" />
-            <element signature="e#1594#1595#0" expanded="true" />
-            <element signature="e#2388#3287#0" expanded="true" />
-            <element signature="e#3286#3287#0" expanded="true" />
+            <element signature="e#186#187#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/IoArgs.java">
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/box/FileReceivePacket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="188" column="13" selection-start-line="188" selection-start-column="13" selection-end-line="188" selection-end-column="13" />
+        <state relative-caret-position="209">
+          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+          <folding>
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#640#641#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/box/StringReceivePacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding>
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#298#299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/IoSelectorProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1007">
+          <caret line="74" column="29" lean-forward="true" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/SocketChannelAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1653">
+          <caret line="97" column="35" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1546#1547#0" expanded="true" />
+            <element signature="e#1594#1595#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/async/AsyncSendDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="96" column="23" lean-forward="true" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/async/AsyncReceiveDispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="104" column="28" lean-forward="true" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
+        <state relative-caret-position="399">
+          <caret line="126" column="28" selection-start-line="126" selection-start-column="28" selection-end-line="126" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#888#889#0" expanded="true" />
@@ -1058,31 +906,259 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/async/AsyncPacketWriter.java">
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/ReceiveDispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="104" column="54" selection-start-line="104" selection-start-column="54" selection-end-line="104" selection-end-column="54" />
+        <state relative-caret-position="285">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="34" column="37" lean-forward="true" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/Frame.java">
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/async/AsyncPacketReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        <state relative-caret-position="192">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
           <folding>
-            <element signature="e#2297#2298#0" expanded="true" />
-            <element signature="e#2356#2357#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/ReceiveFrameFactory.java">
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/Packet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        <state relative-caret-position="179">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#1823#1824#0" expanded="true" />
+            <element signature="e#1850#1851#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/ReceivePacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#333#334#0" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/core.Packet">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>core.Packet</OriginalElement>
+          <nodes>
+            <node x="813.0" y="788.0">box.BytesReceivePacket</node>
+            <node x="664.75" y="639.0">box.AbsByteArrayReceivePacket</node>
+            <node x="282.0" y="799.5">box.StringSendPacket</node>
+            <node x="960.75" y="616.0">box.FileReceivePacket</node>
+            <node x="540.75" y="204.0">core.Packet</node>
+            <node x="576.25" y="102.0">java.io.Closeable</node>
+            <node x="248.0" y="627.5">box.BytesSendPacket</node>
+            <node x="844.5" y="444.0">core.ReceivePacket</node>
+            <node x="0.0" y="627.5">box.FileSendPacket</node>
+            <node x="163.0" y="467.5">core.SendPacket</node>
+            <node x="558.75" y="0.0">java.lang.AutoCloseable</node>
+            <node x="498.0" y="788.0">box.StringReceivePacket</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="core.SendPacket" target="core.Packet">
+              <point x="0.0" y="-37.5" />
+              <point x="247.0" y="419.0" />
+              <point x="589.75" y="419.0" />
+              <point x="-49.0" y="95.0" />
+            </edge>
+            <edge source="box.FileSendPacket" target="core.SendPacket">
+              <point x="0.0" y="-49.5" />
+              <point x="114.0" y="591.0" />
+              <point x="205.0" y="591.0" />
+              <point x="-42.0" y="37.5" />
+            </edge>
+            <edge source="box.AbsByteArrayReceivePacket" target="core.ReceivePacket">
+              <point x="0.0" y="-38.0" />
+              <point x="802.75" y="591.0" />
+              <point x="893.5" y="591.0" />
+              <point x="-49.0" y="61.0" />
+            </edge>
+            <edge source="box.FileReceivePacket" target="core.ReceivePacket">
+              <point x="0.0" y="-61.0" />
+              <point x="1082.25" y="591.0" />
+              <point x="991.5" y="591.0" />
+              <point x="49.0" y="61.0" />
+            </edge>
+            <edge source="core.ReceivePacket" target="core.Packet">
+              <point x="0.0" y="-61.0" />
+              <point x="942.5" y="419.0" />
+              <point x="687.75" y="419.0" />
+              <point x="49.0" y="95.0" />
+            </edge>
+            <edge source="core.Packet" target="java.io.Closeable">
+              <point x="-49.0" y="-95.0" />
+              <point x="589.75" y="179.0" />
+              <point x="607.5" y="179.0" />
+              <point x="-31.25" y="26.0" />
+            </edge>
+            <edge source="java.io.Closeable" target="java.lang.AutoCloseable">
+              <point x="0.0" y="-26.0" />
+              <point x="0.0" y="26.0" />
+            </edge>
+            <edge source="box.StringSendPacket" target="box.BytesSendPacket">
+              <point x="0.0" y="-38.0" />
+              <point x="0.0" y="49.5" />
+            </edge>
+            <edge source="box.BytesReceivePacket" target="box.AbsByteArrayReceivePacket">
+              <point x="0.0" y="-49.5" />
+              <point x="960.0" y="763.0" />
+              <point x="871.75" y="763.0" />
+              <point x="69.0" y="38.0" />
+            </edge>
+            <edge source="box.BytesSendPacket" target="core.SendPacket">
+              <point x="0.0" y="-49.5" />
+              <point x="380.0" y="591.0" />
+              <point x="289.0" y="591.0" />
+              <point x="42.0" y="37.5" />
+            </edge>
+            <edge source="box.StringReceivePacket" target="box.AbsByteArrayReceivePacket">
+              <point x="0.0" y="-49.5" />
+              <point x="645.5" y="763.0" />
+              <point x="733.75" y="763.0" />
+              <point x="-69.0" y="38.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="118.0" y="507.0" />
+          <SelectedNodes>
+            <node>core.Packet</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Methods</Category>
+            <Category>Constructors</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/core.Frame">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>core.Frame</OriginalElement>
+          <nodes>
+            <node x="0.0" y="551.0">frames.ReceiveEntityFrame</node>
+            <node x="722.0666666666666" y="0.0">core.Frame</node>
+            <node x="963.25" y="746.0">frames.SendEntityFrame</node>
+            <node x="1025.9583333333335" y="287.0">frames.AbsSendFrame</node>
+            <node x="335.0" y="562.5">frames.CancelReceiveFrame</node>
+            <node x="672.25" y="746.0">frames.SendHeaderFrame</node>
+            <node x="1200.0" y="551.0">frames.CancelSendFrame</node>
+            <node x="804.0" y="505.0">frames.AbsSendPacketFrame</node>
+            <node x="567.0" y="528.0">frames.ReceiveHeaderFrame</node>
+            <node x="338.5" y="298.5">frames.AbsReceiveFrame</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="frames.ReceiveEntityFrame" target="frames.AbsReceiveFrame">
+              <point x="0.0" y="-49.5" />
+              <point x="157.5" y="480.0" />
+              <point x="372.6666666666667" y="480.0" />
+              <point x="-68.33333333333331" y="72.5" />
+            </edge>
+            <edge source="frames.AbsReceiveFrame" target="core.Frame">
+              <point x="0.0" y="-72.5" />
+              <point x="441.0" y="262.0" />
+              <point x="774.8166666666666" y="262.0" />
+              <point x="-52.75" y="118.5" />
+            </edge>
+            <edge source="frames.SendHeaderFrame" target="frames.AbsSendPacketFrame">
+              <point x="0.0" y="-49.5" />
+              <point x="807.75" y="721.0" />
+              <point x="898.0" y="721.0" />
+              <point x="-94.0" y="95.5" />
+            </edge>
+            <edge source="frames.ReceiveHeaderFrame" target="frames.AbsReceiveFrame">
+              <point x="0.0" y="-72.5" />
+              <point x="675.5" y="480.0" />
+              <point x="509.3333333333333" y="480.0" />
+              <point x="68.33333333333331" y="72.5" />
+            </edge>
+            <edge source="frames.CancelSendFrame" target="frames.AbsSendFrame">
+              <point x="0.0" y="-49.5" />
+              <point x="1296.5" y="480.0" />
+              <point x="1223.2083333333335" y="480.0" />
+              <point x="65.75" y="84.0" />
+            </edge>
+            <edge source="frames.AbsSendFrame" target="core.Frame">
+              <point x="0.0" y="-84.0" />
+              <point x="1157.4583333333335" y="262.0" />
+              <point x="880.3166666666666" y="262.0" />
+              <point x="52.75" y="118.5" />
+            </edge>
+            <edge source="frames.AbsSendPacketFrame" target="frames.AbsSendFrame">
+              <point x="0.0" y="-95.5" />
+              <point x="992.0" y="480.0" />
+              <point x="1091.7083333333335" y="480.0" />
+              <point x="-65.75" y="84.0" />
+            </edge>
+            <edge source="frames.CancelReceiveFrame" target="frames.AbsReceiveFrame">
+              <point x="0.0" y="-38.0" />
+              <point x="0.0" y="72.5" />
+            </edge>
+            <edge source="frames.SendEntityFrame" target="frames.AbsSendPacketFrame">
+              <point x="0.0" y="-49.5" />
+              <point x="1176.25" y="721.0" />
+              <point x="1086.0" y="721.0" />
+              <point x="94.0" y="95.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8" x="225.5454545454545" y="280.0" />
+          <SelectedNodes>
+            <node>core.Frame</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Methods</Category>
+            <Category>Constructors</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/bean/ServerInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#423#424#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/TCPClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1091,12 +1167,132 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/IoContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        <state relative-caret-position="323">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#396#397#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/Connector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/test/java/testClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="13" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/impl/async/AsyncPacketWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="105" column="55" lean-forward="true" selection-start-line="105" selection-start-column="54" selection-end-line="105" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/ReceiveHeaderFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding>
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#756#757#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/IoArgs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+          <folding>
+            <element signature="e#2862#2863#0" expanded="true" />
+            <element signature="e#2925#2926#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/ReceiveFrameFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="25" column="37" lean-forward="true" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/core/Frame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+          <folding>
+            <element signature="e#2297#2298#0" expanded="true" />
+            <element signature="e#2356#2357#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/AbsSendFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/AbsReceiveFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+            <element signature="e#731#732#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib-clink/src/main/java/frames/ReceiveEntityFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#251#252#0" expanded="true" />
+            <element signature="e#280#281#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/test/java/ClientTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
         </state>
       </provider>
     </entry>

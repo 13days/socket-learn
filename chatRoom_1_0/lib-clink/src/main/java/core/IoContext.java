@@ -10,8 +10,8 @@ public class IoContext {
     private volatile static IoContext INSTANCE;
     private final IoProvider ioProvider;
 
-    public IoContext(IoProvider ioPrivider) {
-        this.ioProvider = ioPrivider;
+    public IoContext(IoProvider ioProvider) {
+        this.ioProvider = ioProvider;
     }
 
     public IoProvider getIoProvider(){

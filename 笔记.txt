@@ -646,17 +646,37 @@
 		
 		Frame 数据结构
 			首帧HeadFrame数据内容
-			Length(5)
+			Length(16)
 			Type(8) Flags(8) Identifier(8) Other(8)
 			---------------------------------------
 			Data Length(5)
 			Data Type(1) Data head info(Max256)
 		
 			普通帧Frame
-			Length(5)
+			Length(16)
 			Type(8) Flaes(8) Identifier(8) Other(8)
-			Frame Payload(0...65535)
-		
+			Frame Payload(0...65535)实体部分
+
+
+10.升级
+	并发BUG修复
+	三层缓冲区优化
+	运行时状态格式输出
+	
+	聊天室消息调度优化(CPU,内存,速度)
+	心跳包发送与消费
+	
+	
+	客户端服务器连接器
+		客户端与服务器之间最多建立多少个socket链接？
+			首先要有百万个客户端...
+			Socket四要素:客户端ip+port+服务端ip+port
+			
+			49152到65535号端口属于"动态端口"范围,没有端口可以被正式注册占用 == 16383个端口
+			系统部分端口无法分配情况
+			系统单进程"文件句柄"最大限制
+			百万级别:需要100台电脑
+			多server单域名连接多客户端
 		
 		
 		

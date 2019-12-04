@@ -1,5 +1,7 @@
 import bean.ServerInfo;
+import core.IoContext;
 import foo.Foo;
+import impl.IoSelectorProvider;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,7 +12,9 @@ public class ClientTest {
     private static boolean done = false;
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        File cacjePath = Foo.getCacheDir("client/test");
+        File cachePath = Foo.getCacheDir("client");
+        IoContext.setup().ioProvider(new IoSelectorProvider()).start();
+
         ServerInfo info =  UDPSearcher.searchServer(10000);
         System.out.println("Server:" + info);
         if(info == null){
@@ -19,14 +23,14 @@ public class ClientTest {
 
         // 当前连接数量
         List<TCPClient> tcpClients = new ArrayList<>();
-        for(int i=0; i<100; i++){
+        for(int i=0; i<1000; i++){
             try {
-                TCPClient tcpClient = TCPClient.startWith(info, cacjePath);
+                TCPClient tcpClient = TCPClient.startWith(info, cachePath);
                 tcpClients.add(tcpClient);
                 if(tcpClient == null){
-                    System.out.println("连接异常");
+                    throw new NullPointerException();
                 }
-            } catch (IOException e) {
+            } catch (IOException | NullPointerException e) {
                 System.out.println("连接异常");
             }
 
@@ -37,7 +41,7 @@ public class ClientTest {
                 e.printStackTrace();
             }
         }
-
+        
 
         // 读取键盘命令,发送数据
         System.in.read();
@@ -52,7 +56,7 @@ public class ClientTest {
 
                 // 每隔一秒钟所有客户端向服务器发送消息
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(10);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -76,5 +80,7 @@ public class ClientTest {
         for(TCPClient tcpClient : tcpClients){
             tcpClient.exit();
         }
+
+        IoContext.close();
     }
 }

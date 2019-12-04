@@ -70,7 +70,7 @@ public class ByteUtils {
      * @param srcEnd   The ending index (exclusive)
      * @return The new, populated byte array
      */
-    public static byte[] subbytes(byte[] source, int srcBegin, int srcEnd) {
+    public static byte[] subBytes(byte[] source, int srcBegin, int srcEnd) {
         byte destination[];
 
         destination = new byte[srcEnd - srcBegin];
@@ -85,7 +85,7 @@ public class ByteUtils {
      * @param srcBegin The beginning index (inclusive)
      * @return The new, populated byte array
      */
-    public static byte[] subbytes(byte[] source, int srcBegin) {
-        return subbytes(source, srcBegin, source.length);
+    public static byte[] subBytes(byte[] source, int srcBegin) {
+        return subBytes(source, srcBegin, source.length);
     }
 }

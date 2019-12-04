@@ -52,6 +52,7 @@ class AsyncPacketWriter implements Closeable {
             do {
                 // 还有未消费数据，则重复构建帧
                 temp = buildNewFrame(args);
+                // 把空ioArgs消费完
             } while (temp == null && args.remained());
 
             if (temp == null) {
