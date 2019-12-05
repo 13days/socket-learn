@@ -94,6 +94,7 @@ public class SocketChannelAdapter implements Sender, Receiver, Closeable {
                 if(args == null){
                     processor.onConsumeFailed(null, new IOException("提供的IoArgs是空的"));
                 } else if(args.readFrom(channel)>0){
+                    // 关闭异常java.io.IOException: 远程主机强迫关闭了一个现有的连接。
                     // 读取完成回调,消费成功
                     processor.onConsumeCompleted(args);
                 }else{

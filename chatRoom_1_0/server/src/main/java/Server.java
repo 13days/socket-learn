@@ -28,7 +28,7 @@ public class Server {
         String str;
         do {
             str = bufferedReader.readLine();
-            if("00bye00".equalsIgnoreCase(str)){
+            if(str==null||str.length()==0||"00bye00".equalsIgnoreCase(str)){
                 break;
             }
             // 发送字符串

@@ -51,12 +51,20 @@ public class ClientTest {
         Runnable runnable = () -> {
             while (!done){
                 for(TCPClient tcpClient : tcpClients){
-                    tcpClient.send("Hello ~~");
+                    //System.out.println(tcpClient);
+//                    StringBuffer sb = new StringBuffer();
+//                    for(int x = 0; x<1000; x++){
+//                        sb.append(x);
+//                    }
+//                    for(int x = 0; x<1000; x++){
+//                        tcpClient.send(sb.toString());
+//                    }
+                    tcpClient.send("Hello~");
                 }
 
                 // 每隔一秒钟所有客户端向服务器发送消息
                 try {
-                    Thread.sleep(10);
+                    Thread.sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
