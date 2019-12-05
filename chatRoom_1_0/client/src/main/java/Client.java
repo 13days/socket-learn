@@ -64,10 +64,9 @@ public class Client {
             // 发送字符串
             tcpClient.send(str);
             // todo 测试消息粘包
-            tcpClient.send(str);
-            tcpClient.send(str);
-            tcpClient.send(str);
-
+            for(int x = 0; x<100000; x++){
+                tcpClient.send(str);
+            }
         } while (true);
     }
 }

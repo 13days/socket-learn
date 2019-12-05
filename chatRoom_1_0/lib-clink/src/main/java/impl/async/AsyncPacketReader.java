@@ -247,16 +247,22 @@ public class AsyncPacketReader implements Closeable {
         short identifier = (short) lastIdentifier.getAndAdd(1);
         if (identifier > 255) {
             lastIdentifier.getAndSet(1);
+            identifier = (short)lastIdentifier.get();
         }
 
         // 如果拿到的id被占用了,拿下一个
         // 可能出现的后果,一个连接中255个id都被长时间占用了
         // 导致不断递归,最终爆栈
-        // 解决方案:控制发送数据的上限,手动控制栈的深度,递归的时间
+        // 解决方案:控制发送数据的上限,手动控制栈的深度,递归的时间 todo 未控制发送数据上限
         if(idFlag[identifier].get()==true){
             return generateIdentifier(deep+1);
         }
-        return identifier;
+        // 声明id被占用了
+        if(idFlag[identifier].compareAndSet(false,true)){
+            return identifier;
+        }else{
+            return generateIdentifier(deep+1);
+        }
     }
 
     /**
