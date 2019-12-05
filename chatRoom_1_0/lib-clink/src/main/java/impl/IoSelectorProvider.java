@@ -37,7 +37,7 @@ public class IoSelectorProvider implements IoProvider {
         this.inputHandlePool = Executors.newFixedThreadPool(4,
                 new IoProviderThreadFactory("IoProvider-Input-Thread-"));
         this.outputHandlePool = Executors.newFixedThreadPool(4,
-                new IoProviderThreadFactory("IoProvider-Outuput-Thread-"));
+                new IoProviderThreadFactory("IoProvider-Output-Thread-"));
 
         // 读写selector监听异步线程在构造的时候就启动了
         startRead();

@@ -23,7 +23,7 @@ public class ClientTest {
 
         // 当前连接数量
         List<TCPClient> tcpClients = new ArrayList<>();
-        for(int i=0; i<1000; i++){
+        for(int i=0; i<100; i++){
             try {
                 TCPClient tcpClient = TCPClient.startWith(info, cachePath);
                 tcpClients.add(tcpClient);
@@ -35,13 +35,13 @@ public class ClientTest {
             }
 
             // 服务器队列默认最多接受50个连接在列队里,超过部分会抛异常
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+//            try {
+//                Thread.sleep(100);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
         }
-        
+
 
         // 读取键盘命令,发送数据
         System.in.read();

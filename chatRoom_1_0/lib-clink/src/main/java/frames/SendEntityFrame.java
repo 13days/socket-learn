@@ -16,7 +16,7 @@ public class SendEntityFrame extends AbsSendPacketFrame {
                     ReadableByteChannel channel,
                     SendPacket packet) {
         super((int) Math.min(entityLength, Frame.MAX_CAPACITY), // bodyRemaining
-                Frame.TYPE_PACKET_ENTITY,
+                Frame.TYPE_PACKET_ENTITY, // head[2]实体帧类型
                 Frame.FLAG_NONE,
                 identifier,
                 packet);

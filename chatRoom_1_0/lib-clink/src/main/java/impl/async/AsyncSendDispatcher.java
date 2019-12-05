@@ -38,6 +38,7 @@ public class AsyncSendDispatcher implements SendDispatcher, IoArgs.IoArgsEventPr
             queue.offer(packet);
             // 如果不是发送状态,激活起来，发送状态:有一个或多个packet正在发送....
             if(isSending.compareAndSet(false, true)){
+                // 发送之前,先请求packet,构建帧
                 if(reader.requestTakePacket()){
                     requestSend();
                 }

@@ -18,7 +18,7 @@ public class SendHeaderFrame extends AbsSendPacketFrame {
 
     public SendHeaderFrame(short identifier, SendPacket packet) {
         super(PACKET_HEADER_FRAME_MIN_LENGTH,
-                Frame.TYPE_PACKET_HEADER,
+                Frame.TYPE_PACKET_HEADER, // head[2]头帧类型
                 Frame.FLAG_NONE,
                 identifier,
                 packet);

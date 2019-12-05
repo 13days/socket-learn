@@ -11,6 +11,9 @@ import frames.SendHeaderFrame;
 
 import java.io.Closeable;
 import java.io.IOException;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 
 
 /**
@@ -25,10 +28,15 @@ public class AsyncPacketReader implements Closeable {
     private volatile int nodeSize = 0;
 
     // 1,2,3.....255
-    private short lastIdentifier = 0;
+    private AtomicInteger lastIdentifier = new AtomicInteger(1);
+    private volatile AtomicBoolean[] idFlag = new AtomicBoolean[256];
+    private Semaphore idLimit = new Semaphore(1);
 
     AsyncPacketReader(PacketProvider provider) {
         this.provider = provider;
+        for(int i=0; i<=255; ++i){
+            idFlag[i] = new AtomicBoolean(false);
+        }
     }
 
     /**
@@ -46,7 +54,7 @@ public class AsyncPacketReader implements Closeable {
 
         SendPacket packet = provider.takePacket();
         if (packet != null) {
-            short identifier = generateIdentifier();
+            short identifier = generateIdentifier(1);
             SendHeaderFrame frame = new SendHeaderFrame(identifier, packet);
             appendNewFrame(frame);
         }
@@ -70,6 +78,7 @@ public class AsyncPacketReader implements Closeable {
 
 
         try {
+            // 返回false继续消费帧header和body
             if (currentFrame.handle(args)) {
                 // 消费完本帧
                 // 尝试基于本帧构建后续帧
@@ -81,6 +90,11 @@ public class AsyncPacketReader implements Closeable {
                     // 通知完成
                     provider.completedPacket(((SendEntityFrame) currentFrame).getPacket(),
                             true);
+
+                    // 释放本链接的占位,以防并发发送时,两个相同的identifier同时发送
+                    short bodyIdentifier = currentFrame.getBodyIdentifier();
+                    idFlag[bodyIdentifier].compareAndSet(true, false);
+                    idLimit.release();
                 }
 
                 // 从链头弹出
@@ -215,13 +229,32 @@ public class AsyncPacketReader implements Closeable {
 
     /**
      * 构建一份Packet惟一标志
+     * todo bug? 当一个id还没完全发送完,又发送了255个包,又发送了一个同样的id混在网络里...
      *
      * @return 标志为：1～255
      */
-    private short generateIdentifier() {
-        short identifier = ++lastIdentifier;
-        if (identifier == 255) {
-            lastIdentifier = 0;
+    private short generateIdentifier(int deep) {
+        // 控制递归深度,虽然不是真的控制了,但是阻塞有效缓冲了栈的深度
+        if(deep>=255*2){
+            try {
+                idLimit.acquire();
+                // 唤醒后重来
+                return generateIdentifier(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        short identifier = (short) lastIdentifier.getAndAdd(1);
+        if (identifier > 255) {
+            lastIdentifier.getAndSet(1);
+        }
+
+        // 如果拿到的id被占用了,拿下一个
+        // 可能出现的后果,一个连接中255个id都被长时间占用了
+        // 导致不断递归,最终爆栈
+        // 解决方案:控制发送数据的上限,手动控制栈的深度,递归的时间
+        if(idFlag[identifier].get()==true){
+            return generateIdentifier(deep+1);
         }
         return identifier;
     }

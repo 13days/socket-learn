@@ -33,7 +33,7 @@ public abstract class Frame {
         }
 
         if (identifier < 1 || identifier > 255) {
-            throw new RuntimeException("The Body identifier of a single frame should be between 1 and 255");
+            throw new RuntimeException("The Body identifier of a single frame should be between 1 and 255:[identifier:"+ identifier+"]");
         }
 
         // 00000000 00000000 00000000 01000000

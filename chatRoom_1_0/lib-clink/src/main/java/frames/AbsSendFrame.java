@@ -17,6 +17,7 @@ public abstract class AbsSendFrame extends Frame {
     }
 
     /**
+     * 从packet里消费数据
      * 数据消费--同一时刻只允许一个线程消费一份数据
      * @param args 数据
      * @return

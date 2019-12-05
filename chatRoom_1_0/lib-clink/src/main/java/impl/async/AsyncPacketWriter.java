@@ -14,6 +14,7 @@ import java.util.HashMap;
 
 /**
  * 写数据到Packet中
+ * 把Frame转换为Packet
  */
 class AsyncPacketWriter implements Closeable {
     private final PacketProvider provider;
@@ -68,6 +69,7 @@ class AsyncPacketWriter implements Closeable {
         }
 
         // 确保此时currentFrame一定不为null
+        // System.out.println("我来啦");
         Frame currentFrame = frameTemp;
         do {
             try {
