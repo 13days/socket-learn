@@ -28,15 +28,18 @@ public class AsyncPacketReader implements Closeable {
     private volatile int nodeSize = 0;
 
     // 1,2,3.....255
-    private AtomicInteger lastIdentifier = new AtomicInteger(1);
-    private volatile AtomicBoolean[] idFlag = new AtomicBoolean[256];
-    private Semaphore idLimit = new Semaphore(1);
+    private short lastIdentifier = 0;
+    // todo 单连接同步了,这里不需要了
+//    private AtomicInteger lastIdentifier = new AtomicInteger(1);
+//    private volatile AtomicBoolean[] idFlag = new AtomicBoolean[256];
+//    private Semaphore idLimit = new Semaphore(1);
 
     AsyncPacketReader(PacketProvider provider) {
         this.provider = provider;
-        for(int i=0; i<=255; ++i){
-            idFlag[i] = new AtomicBoolean(false);
-        }
+        // todo 单连接同步了,这里不需要了
+//        for(int i=0; i<=255; ++i){
+//            idFlag[i] = new AtomicBoolean(false);
+//        }
     }
 
     /**
@@ -54,7 +57,7 @@ public class AsyncPacketReader implements Closeable {
 
         SendPacket packet = provider.takePacket();
         if (packet != null) {
-            short identifier = generateIdentifier(1);
+            short identifier = generateIdentifier();
             SendHeaderFrame frame = new SendHeaderFrame(identifier, packet);
             appendNewFrame(frame);
         }
@@ -78,6 +81,9 @@ public class AsyncPacketReader implements Closeable {
 
 
         try {
+            // 多线程bug,两个线程同时消费一个帧,第一个线程刚好消费完一个帧,另一个线程又消费这个帧,返回args.remained()==0,导致后续bug
+            // 也就是上层,请求发送触发多次以上，触发的bug,所以把请求发送用一个状态维护起来,一个连接一次只能有一个线程在请求数据到ioArgs,
+            // 也就是同一个连接中Packet->Frame->IoArgs->channel是同步的,channel->网络是异步的,但多连接网络发送还是并发的
             // 返回false继续消费帧header和body
             if (currentFrame.handle(args)) {
                 // 消费完本帧
@@ -92,9 +98,10 @@ public class AsyncPacketReader implements Closeable {
                             true);
 
                     // 释放本链接的占位,以防并发发送时,两个相同的identifier同时发送
-                    short bodyIdentifier = currentFrame.getBodyIdentifier();
-                    idFlag[bodyIdentifier].compareAndSet(true, false);
-                    idLimit.release();
+                    // todo 单连接同步了,这里不需要了
+//                    short bodyIdentifier = currentFrame.getBodyIdentifier();
+//                    idFlag[bodyIdentifier].compareAndSet(true, false);
+//                    idLimit.release();
                 }
 
                 // 从链头弹出
@@ -231,39 +238,51 @@ public class AsyncPacketReader implements Closeable {
     /**
      * 构建一份Packet惟一标志
      * todo bug? 当一个id还没完全发送完,又发送了255个包,又发送了一个同样的id混在网络里...
+     * todo 单连接同步了,这里不需要了
+     * @return 标志为：1～255
+     */
+//    private short generateIdentifier(int deep) {
+//        // 控制递归深度,虽然不是真的控制了,但是阻塞有效缓冲了栈的深度
+//        if(deep>=255*2){
+//            try {
+//                idLimit.acquire();
+//                // 唤醒后重来
+//                return generateIdentifier(1);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        short identifier = (short) lastIdentifier.getAndAdd(1);
+//        if (identifier > 255) {
+//            lastIdentifier.getAndSet(1);
+//            identifier = (short)lastIdentifier.get();
+//        }
+//
+//        // 如果拿到的id被占用了,拿下一个
+//        // 可能出现的后果,一个连接中255个id都被长时间占用了
+//        // 导致不断递归,最终爆栈
+//        // 解决方案:控制发送数据的上限,手动控制栈的深度,递归的时间 todo 未控制发送数据上限
+//        if(idFlag[identifier].get()==true){
+//            return generateIdentifier(deep+1);
+//        }
+//        // 声明id被占用了
+//        if(idFlag[identifier].compareAndSet(false,true)){
+//            return identifier;
+//        }else{
+//            return generateIdentifier(deep+1);
+//        }
+//    }
+    /**
+     * 构建一份Packet惟一标志
      *
      * @return 标志为：1～255
      */
-    private short generateIdentifier(int deep) {
-        // 控制递归深度,虽然不是真的控制了,但是阻塞有效缓冲了栈的深度
-        if(deep>=255*2){
-            try {
-                idLimit.acquire();
-                // 唤醒后重来
-                return generateIdentifier(1);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+    private short generateIdentifier() {
+        short identifier = ++lastIdentifier;
+        if (identifier == 255) {
+            lastIdentifier = 0;
         }
-        short identifier = (short) lastIdentifier.getAndAdd(1);
-        if (identifier > 255) {
-            lastIdentifier.getAndSet(1);
-            identifier = (short)lastIdentifier.get();
-        }
-
-        // 如果拿到的id被占用了,拿下一个
-        // 可能出现的后果,一个连接中255个id都被长时间占用了
-        // 导致不断递归,最终爆栈
-        // 解决方案:控制发送数据的上限,手动控制栈的深度,递归的时间 todo 未控制发送数据上限
-        if(idFlag[identifier].get()==true){
-            return generateIdentifier(deep+1);
-        }
-        // 声明id被占用了
-        if(idFlag[identifier].compareAndSet(false,true)){
-            return identifier;
-        }else{
-            return generateIdentifier(deep+1);
-        }
+        return identifier;
     }
 
     /**

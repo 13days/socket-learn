@@ -100,10 +100,13 @@ public class AsyncReceiveDispatcher implements ReceiveDispatcher,
      */
     @Override
     public void onConsumeCompleted(IoArgs args) {
+        if(isClosed.get()){
+            return;
+        }
         // 有数据则重复消费
         do {
             writer.consumeIoArgs(args);
-        } while (args.remained());
+        } while (args.remained() && !isClosed.get());
         registerReceive();
     }
 

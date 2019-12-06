@@ -123,7 +123,7 @@ public class SocketChannelAdapter implements Sender, Receiver, Closeable {
                     // 读取完成回调,消费完成
                     processor.onConsumeCompleted(args);
                 }else{
-                    // 消费失败
+                    // 消费失败,args==0
                     processor.onConsumeFailed(args, new IOException("Can write any data!"));
                 }
             } catch (IOException e) {
