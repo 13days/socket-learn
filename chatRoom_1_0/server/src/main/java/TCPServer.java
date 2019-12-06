@@ -30,6 +30,9 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
     
     private final ExecutorService forwardingThreadPoolExecutor;
 
+    public static long sendSize = 0L;
+    public static long receiveSize = 0L;
+
     /**
      * 配置
      * @param port
@@ -96,6 +99,8 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
         for (ClientHandler clientHandler : clientHandlerList) {
             clientHandler.send(str);
         }
+        // 发送数量增加
+        sendSize += clientHandlerList.size();
     }
 
     /**
@@ -114,6 +119,8 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
      */
     @Override
     public void onNewMessageArrived(final ClientHandler handler, String msg) {
+        // 接收增加
+        receiveSize++;
         // todo 消息粘包
         // System.out.println(msg.replace("\r\n","-\\r\\n-"));
         // 异步转发任务
@@ -125,6 +132,7 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
                         continue;
                     }
                     clientHandler.send ("Received-" + handler.getClientInfo() + ":" + msg);
+                    sendSize++;
                 }
             }
         });

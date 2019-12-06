@@ -23,7 +23,7 @@ public class ClientTest {
 
         // 当前连接数量
         List<TCPClient> tcpClients = new ArrayList<>();
-        for(int i=0; i<100; i++){
+        for(int i=0; i<200; i++){
             try {
                 TCPClient tcpClient = TCPClient.startWith(info, cachePath);
                 tcpClients.add(tcpClient);
@@ -64,7 +64,7 @@ public class ClientTest {
 
                 // 每隔一秒钟所有客户端向服务器发送消息
                 try {
-                    Thread.sleep(100);
+                    Thread.sleep(1500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
